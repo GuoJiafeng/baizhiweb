@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		<!--å¼å¥å¤é¨æ ·å¼-->
+
 		<link rel="stylesheet" type="text/css" href="${base_path}/css/mainRiver.css"/>
 		<link rel="stylesheet" type="text/css" href="${base_path}/css/login.css"/>
 	</head>
@@ -74,7 +74,7 @@
 							</li>
 							<li class="span_input">
 								<span class="pw">PASSWORD</span>
-								<input type="text" name="password" id="password" value="" />
+								<input type="password" name="password" id="password" value="" />
 							</li>
 							<li class="protocol">
 								<input type="checkbox" name="" id="" value="" />

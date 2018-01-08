@@ -1,7 +1,6 @@
 package com.baizhi.controller;
 
-import java.io.File;
-import java.util.Date;
+
 import java.util.UUID;
 
 import javax.servlet.http.HttpSession;
@@ -9,13 +8,10 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.multipart.MultipartFile;
-
-import com.baizhi.entity.BaiZhiFile;
 import com.baizhi.entity.BaiZhiOrder;
 import com.baizhi.entity.BaiZhiUser;
-import com.baizhi.service.BaiZhiFileService;
 import com.baizhi.service.BaiZhiOrderService;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/order")
@@ -53,5 +49,12 @@ public class BaiZhiOrderController {
 		order.setPrice(a*b*c);
 		service.insert(order);
 		return "/main";
+	}
+
+	@RequestMapping("getPrice")
+	public @ResponseBody String getPrice(BaiZhiOrder order){
+		Double price = service.getPrice(order);
+		System.out.println("123123123123132");
+		return String.valueOf(price);
 	}
 }
