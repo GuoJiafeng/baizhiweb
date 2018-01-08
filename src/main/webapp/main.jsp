@@ -12,38 +12,7 @@
 	</head>
 	<body>
 		<!--导航栏信息-->
-		<nav>
-			<div class="nav">
-				<!--左边浮动-->
-				<div class="left_float">
-					<img src="${base_path}/img/logo.png" />
-					<p>
-						<h2>MainRiver Soft</h2>
-						<span>069 - 657 777 1</span>
-					</p>
-				</div>
-				<!--右边浮动-->
-				<ul class="right_float" >
-					<li>
-						<a href="${base_path}/file/toupload">Make an Appointment</a>
-					</li>
-					<li>
-						<a href="${base_path}/order/toorder">Pricing</a>
-					</li>
-					<li>
-						<a href="#">How it works</a>
-					</li>
-					<li class="land">
-						<img src="${base_path}/img/user.png" />
-						<a href="${base_path}/user/tologin.do">Land</a>
-					</li>
-					<li>
-						<input type="button" value="Need" />
-						<input type="button" value="NeedBank" />
-					</li>
-				</ul>
-			</div>
-		</nav>
+		<jsp:include page="top.jsp"/>
 		<!-- 顶部内容 -->
 		<header>
 			<div class="header">

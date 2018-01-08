@@ -51,38 +51,7 @@
 </head>
 <body>
 
-<nav>
-    <div class="nav">
-
-        <div class="left_float">
-            <img src="${base_path}/img/logo.png"/>
-            <p>
-            <h2>MainRiver Soft</h2>
-            <span>069 - 657 777 1</span>
-            </p>
-        </div>
-
-        <ul class="right_float">
-            <li>
-                <a href="${base_path}/file/toupload">Make an Appointment</a>
-            </li>
-            <li>
-                <a href="${base_path}/order/toorder">Pricing</a>
-            </li>
-            <li>
-                <a href="#">How it works</a>
-            </li>
-            <li class="land">
-                <img src="${base_path}/img/user.png"/>
-                <a href="${base_path}/user/tologin.do">Land</a>
-            </li>
-            <li>
-                <input type="button" value="Need"/>
-                <input type="button" value="NeedBank"/>
-            </li>
-        </ul>
-    </div>
-</nav>
+<jsp:include page="top.jsp"/>
 
 <form action="${base_path}/file/upload.do" method="post" enctype="multipart/form-data">
     <div class="section_text">
