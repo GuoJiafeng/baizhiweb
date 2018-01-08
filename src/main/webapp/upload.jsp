@@ -9,6 +9,12 @@
 		<!--å¼å¥å¤é¨æ ·å¼-->
 		<link rel="stylesheet" type="text/css" href="${base_path}/css/mainRiver.css"/>
 		<link rel="stylesheet" type="text/css" href="${base_path}/css/webStyle.css"/>
+
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript">
+
+
+		</script>
 	</head>
 	<body>
 		<!--å¯¼èªæ ä¿¡æ¯-->
@@ -51,7 +57,7 @@
 				<ul>
 					<li class="s_upload">
 				<span>Please upload your demand book!</span>
-						<p><input type="file" name="file" /></p>
+						<p><input type="file" name="file" disabled /></p>
 					</li>
 					
 					<li class="select_sum">
