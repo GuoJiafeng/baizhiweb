@@ -5,16 +5,42 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-
 		<link rel="stylesheet" type="text/css" href="${base_path}/css/mainRiver.css"/>
 		<link rel="stylesheet" type="text/css" href="${base_path}/css/login.css"/>
+		<script type="text/javascript" src="${base_path}/js/jquery-1.8.3.min.js"></script>
+		<script>
+            $(function () {
+                $("#sbmt").click(function () {
+                    if(${empty token}){
+                        $.ajax({
+                            url:"${base_path}/user/createtoken",
+                            type:"get",
+                        });
+                        $("#log").submit();
+                    }else {
+                        $.ajax({
+                            url:"${base_path}/user/checktoken",
+                            type:"get",
+                            dataType:"json",
+                            success:function(result){
+                                if(result){
+                                    alert("您的操作过于频繁");
+                                }else {
+                                    $("#log").submit();
+                                }
+                            }
+                        });
+                    }
+                });
+            });
+		</script>
 	</head>
 	<body><s>	</s>
 		<!--å¯¼èªæ ä¿¡æ¯-->
 	<jsp:include page="top.jsp"/>
 		<!-- é¡¶é¨åå®¹ -->
 		<header>
-		<form action="${base_path}/user/login.do" method="post">
+		<form action="${base_path}/user/login.do" method="post" id="log">
 			<div class="header">
 				<!--è½®æ­å¾-->
 				<div id="banner">
@@ -51,7 +77,7 @@
 								<a href="#">Forgot password?</a>
 							</li>
 							<li class="submit">
-								<input type="submit" name="" id="" value="" />
+								<input type="button" name="" id="sbmt" value="" />
 							</li>
 						</ul>
 					</div>

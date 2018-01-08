@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.baizhi.entity.BaiZhiUser;
 import com.baizhi.service.BaiZhiUserService;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Controller
 @RequestMapping("/user")
@@ -41,4 +45,21 @@ public class BaiZhiUserController {
 		session.setAttribute("user", reg);
 		return "/main";
 	}
+	@ResponseBody
+	@RequestMapping("createtoken")
+	public void createtoken(HttpSession session){
+		session.setAttribute("token",new Date());
+	}
+	@ResponseBody
+	@RequestMapping("checktoken")
+	public Boolean checktoken(HttpSession session){
+        Object token = session.getAttribute("token");
+        Date oldtoken = (Date)token;
+        long l = new Date().getTime() - oldtoken.getTime()/1000;
+        if(l<=5){
+            return false;
+        }else{
+            return true;
+        }
+    }
 }

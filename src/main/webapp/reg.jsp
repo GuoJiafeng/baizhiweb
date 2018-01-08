@@ -9,12 +9,39 @@
 		<!--å¼å¥å¤é¨æ ·å¼-->
 		<link rel="stylesheet" type="text/css" href="${base_path}/css/mainRiver.css"/>
 		<link rel="stylesheet" type="text/css" href="${base_path}/css/signStyle.css"/>
+		<script type="text/javascript" src="${base_path}/js/jquery-1.8.3.min.js"></script>
+		<script>
+			$(function () {
+                $("#sbmt").click(function () {
+                   if(${empty token}){
+                       $.ajax({
+                           url:"${base_path}/user/createtoken",
+						   type:"get",
+                       });
+                       $("#reg").submit();
+					}else {
+                       $.ajax({
+                           url:"${base_path}/user/checktoken",
+                           type:"get",
+                           dataType:"json",
+						   success:function(result){
+								if(result){
+								    alert("您的操作过于频繁");
+								}else {
+                                    $("#reg").submit();
+								}
+						   }
+                       });
+				   }
+                });
+            });
+		</script>
 	</head>
 	<body>
 		<!--å¯¼èªæ ä¿¡æ¯-->
 		<jsp:include page="top.jsp"/>
 		<!-- åå®¹ -->
-			<form action="${base_path}/user/reg.do" method="post">
+			<form action="${base_path}/user/reg.do" method="post" id="reg">
 		<section>
 			<!--æ é¢-->
 			<p class="sing_head"><img src="${base_path}/img/sign_up.png"/></p>
@@ -49,7 +76,7 @@
 					<input type="" name="phone" id="" value="" />
 				</li>
 				<li class="section_input_submit">					
-					<input type="submit" name="" id="" value="" />
+					<input type="button" name="" id="sbmt" value="" />
 				</li>
 			</ul>
 			
