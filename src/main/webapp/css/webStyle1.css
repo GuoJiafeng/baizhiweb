@@ -1,0 +1,145 @@
+
+	.section_text{
+		margin: 46px auto;
+		background-color:#fff;	
+		width: 1240px;
+		/* height: 1053px; */
+		font-family: SimHei;
+		
+		color: #8a8a8a;
+		/* border: 1px solid #000; */
+	}
+	
+	
+	.section_text>.link_web_App{
+		width: 1080px;
+		height: 226px;
+		margin: 0 auto;
+		box-sizing: border-box;
+		padding: 30px 216px;
+	}
+	.section_text>.link_web_App>.link_web>img{
+		float: left;
+	}
+	.section_text>.link_web_App>.link_App>img{
+		float: right;
+	}
+	
+	
+	.section_text>ul{
+		margin: 0 auto;
+		width: 1080px;
+		/*height: 728px;*/
+		border-radius: 5px;
+		border: solid 1px #c8c7c3;
+	}
+	.section_text>ul>li{
+		border-bottom: solid 1px #c8c7c3;
+	}
+	.section_text>ul>li span{
+		margin-left: 80px;
+	}
+	
+	/*第一排*/
+	.section_text>ul>.s_upload{
+		
+		width: 1080px;
+		height: 90px;
+	}
+	.section_text>ul>.s_upload>span{
+		float: left;
+		width: 670px;
+		line-height: 90px;
+		font-size: 24px;
+	}
+	
+	.section_text>ul>.s_upload>p{
+		float: right;
+		width: 140px;
+		height: 40px;
+		margin: 25px 0px;
+		margin-right: 70px;
+	}
+	.section_text>ul>.s_upload input{
+		cursor: pointer;
+		outline: none;
+		border: none;
+		display: block;
+		width: 140px;
+		height: 40px;
+		background: url(../img/s_upload.png) no-repeat center;
+	}
+	
+	
+	/*第二、第三、第四排共有属性*/
+	.section_text>ul>.select_sum{
+		width: 1080px;
+		height: 90px;
+	}
+	.section_text>ul>.select_sum>span{
+		float: left;
+		width: 628px;
+		line-height: 90px;
+		font-size: 24px;
+	}
+	.section_text>ul>.select_sum>select{
+		cursor: pointer;
+		padding-left: 50px;
+		width: 140px;
+		height: 40px;
+		background-color: #f8ffc0;
+		margin-top:23px;
+		margin-right: 70px;
+		border-radius: 3px;
+		float: right;
+		border: solid 1px #e6e6e6;
+		color: #fccf80;
+	}
+	.section_text>ul>.select_sum>select option{
+		color: #fccf80;
+	}
+	
+	/*s_money一排自有属性*/
+	.section_text>ul>.s_money{
+		height: 90px;
+		border: none;
+	}
+	.section_text>ul>.s_money>span{
+		float: left;
+		width: 628px;
+		line-height: 90px;
+		font-size: 24px;
+	}
+	.section_text>ul>.s_money>p{
+		float: right;
+		width: 140px;
+		height: 40px;
+		margin: 23px 0px;
+		margin-right: 70px;
+	}
+	.section_text>ul>.s_money input{
+		cursor: pointer;
+		outline: none;
+		border: none;
+		display: block;
+		width: 140px;
+		height: 40px;
+		background: url(../img/s_money.png) no-repeat center;
+	}
+	
+	/*提交按钮*/
+	.section_text>.submit{
+		cursor: pointer;
+		width: 86px;
+		height: 42px;
+		margin:40px auto;
+	}
+	.section_text>.submit>input{
+		cursor: pointer;
+		outline: none;
+		border: none;
+		display: block;
+		width: 86px;
+		height: 42px;
+		background: url(../img/Submit_botton.png) no-repeat center;
+	}

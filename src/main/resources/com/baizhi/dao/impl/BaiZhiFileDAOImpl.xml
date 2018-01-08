@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.dao.BaiZhiFileDAO">
+	<insert id="insert" parameterType="BaiZhiFile">
+		insert into baizhi_file values(#{filename},#{uploadtime},#{text},#{userid},#{id},#{fileurl})
+	</insert>
+</mapper>
+
+
