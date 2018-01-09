@@ -1,3 +1,4 @@
+<%@page pageEncoding="UTF-8" contentType="text/html; UTF-8" isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -70,7 +71,7 @@
 				left:-5px;
 			}
 			.usa{
-				background-image: url(img/USA.png);
+				background-image: url(${base_path}/img/USA.png);
 				background-repeat: no-repeat;
 				height: 26px;
 				width: 36px;
@@ -78,7 +79,7 @@
 				outline: none;
 			}
 			.cn{
-				background-image: url(img/CN.png);
+				background-image: url(${base_path}/img/CN.png);
 				background-repeat: no-repeat;
 				height: 26px;
 				width: 36px;
