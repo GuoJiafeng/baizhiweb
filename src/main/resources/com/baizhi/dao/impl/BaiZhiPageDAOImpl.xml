@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="">
+
+    <select id="queryEnglishByPageName" resultType="java.lang.String">
+      SELECT english FROM baizhi_page WHERE pagename = #{pageName}
+    </select>
+
+    <select id="queryChineseByPageName" resultType="java.lang.String">
+        SELECT chinese FROM baizhi_page WHERE pagename = #{pageName}
+    </select>
+
+</mapper>
