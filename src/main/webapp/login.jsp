@@ -16,14 +16,14 @@
                     if ($(this).val().length >= 3 && $(this).val().length <= 12 && $(this).val() != '') {
                         ok1 = true;
                     } else {
-                        alert('用户名应该为3-20位之间');
+                        alert('The username should be between 3-20 words(用户名应该为3-20位之间)');
                     }
                 });
                 $("#password").blur(function () {
                     if ($(this).val().length >= 6 && $(this).val().length <= 20 && $(this).val() != '') {
                         ok2 = true;
                     } else {
-                        alert('密码应该为6-20位之间');
+                        alert('The password should be between 6-20 words(密码应该为6-20位之间)');
                     }
                 });
                 $("#sbmt").click(function () {
@@ -35,7 +35,7 @@
                         if (ok1 && ok2) {
                             $("#log").submit();
                         } else {
-                            alert("您的输入有误,请更正后登陆")
+                            alert("Your input is wrong, please correct and login(您的输入有误,请更正后登陆)")
                         }
                     }else {
                         $.ajax({
@@ -44,12 +44,12 @@
                             dataType:"json",
                             success:function(result){
                                 if(result){
-                                    alert("您的操作过于频繁");
+                                    alert("Your operation is too frequent(您的操作过于频繁)");
                                 }else {
                                     if (ok1 && ok2) {
                                         $("#log").submit();
                                     } else {
-                                        alert("您的输入有误,请更正后登陆")
+                                        alert("Your input is wrong, please correct and login(您的输入有误,请更正后登陆)")
                                     }
                                 }
                             }

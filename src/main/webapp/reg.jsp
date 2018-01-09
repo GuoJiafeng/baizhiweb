@@ -20,19 +20,19 @@
                 if ($(this).val().length >= 3 && $(this).val().length <= 12 && $(this).val() != '') {
                     ok1 = true;
                 } else {
-                    alert('用户名应该为3-20位之间');
+                    alert('The username should be between 3-20 words(用户名应该为3-20位之间)');
                 }
             });
             $("#password").blur(function () {
                 if ($(this).val().length >= 6 && $(this).val().length <= 20 && $(this).val() != '') {
                     ok2 = true;
                 } else {
-                    alert('密码应该为6-20位之间');
+                    alert('The password should be between 6-20 words(密码应该为6-20位之间)');
                 }
             });
             $("#email").blur(function () {
                 if ($(this).val().search(/\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/) == -1) {
-                    alert('请输入正确的邮箱格式');
+                    alert('Please enter the correct mailbox format(请输入正确的邮箱格式)');
                 } else {
                     ok3 = true;
                 }
@@ -41,7 +41,7 @@
                 if ($(this).val().length = 11) {
                     ok4 = true;
                 } else {
-                    alert('请输入正确的11位手机号');
+                    alert('Please enter 11 mobile phone numbers(请输入11位手机号)');
                 }
             });
         }
@@ -59,7 +59,7 @@
                     if (ok1 && ok2 && ok3 && ok4) {
                         $("#reg").submit();
                     } else {
-                        alert("您的输入有误,请更正后提交")
+                        alert("Your input is incorrect. Please correct it and submit it(您的输入有误,请更正后提交)")
                     }
                 } else {
                     $.ajax({
@@ -68,12 +68,12 @@
                         dataType: "json",
                         success: function (result) {
                             if (result) {
-                                alert("您的操作过于频繁");
+                                alert("Your operation is too frequent(您的操作过于频繁)");
                             } else {
                                 if (ok1 && ok2 && ok3 && ok4) {
                                     $("#reg").submit();
                                 } else {
-                                    alert("您的输入有误,请更正后提交")
+                                    alert("Your input is incorrect. Please correct it and submit it(您的输入有误,请更正后提交)")
                                 }
                             }
                         }
