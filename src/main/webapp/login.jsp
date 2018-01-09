@@ -60,9 +60,9 @@
 		</script>
 	</head>
 	<body><s>	</s>
-		<!--å¯¼èªæ ä¿¡æ¯-->
+
 	<jsp:include page="top.jsp"/>
-		<!-- é¡¶é¨åå®¹ -->
+
 		<header>
 		<form action="${base_path}/user/login.do" method="post" id="log">
 			<div class="header">
