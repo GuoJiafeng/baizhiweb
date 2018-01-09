@@ -10,13 +10,33 @@
 		<script type="text/javascript" src="${base_path}/js/jquery-1.8.3.min.js"></script>
 		<script>
             $(function () {
+                ok1 = false;
+                ok2 = false;
+                $("#username").blur(function () {
+                    if ($(this).val().length >= 3 && $(this).val().length <= 12 && $(this).val() != '') {
+                        ok1 = true;
+                    } else {
+                        alert('用户名应该为3-20位之间');
+                    }
+                });
+                $("#password").blur(function () {
+                    if ($(this).val().length >= 6 && $(this).val().length <= 20 && $(this).val() != '') {
+                        ok2 = true;
+                    } else {
+                        alert('密码应该为6-20位之间');
+                    }
+                });
                 $("#sbmt").click(function () {
                     if(${empty token}){
                         $.ajax({
                             url:"${base_path}/user/createtoken",
                             type:"get",
                         });
-                        $("#log").submit();
+                        if (ok1 && ok2) {
+                            $("#log").submit();
+                        } else {
+                            alert("您的输入有误,请更正后登陆")
+                        }
                     }else {
                         $.ajax({
                             url:"${base_path}/user/checktoken",
@@ -26,7 +46,11 @@
                                 if(result){
                                     alert("您的操作过于频繁");
                                 }else {
-                                    $("#log").submit();
+                                    if (ok1 && ok2) {
+                                        $("#log").submit();
+                                    } else {
+                                        alert("您的输入有误,请更正后登陆")
+                                    }
                                 }
                             }
                         });
@@ -65,7 +89,7 @@
 							<li class="or"></li>
 							<li class="span_input">
 								<span>USERNAME</span>
-								<input type="text" name="username" id="email" value="" />
+								<input type="text" name="username" id="username" value="" />
 							</li>
 							<li class="span_input">
 								<span class="pw">PASSWORD</span>
