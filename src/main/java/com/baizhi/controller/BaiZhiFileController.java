@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.baizhi.service.BaiZhiPageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +24,9 @@ import com.baizhi.service.BaiZhiFileService;
 public class BaiZhiFileController {
 	@Autowired
 	private BaiZhiFileService service;
-	
+	@Autowired
+	private BaiZhiPageService baiZhiPageService;
+
 	public BaiZhiFileService getService() {
 		return service;
 	}
@@ -32,7 +35,14 @@ public class BaiZhiFileController {
 		this.service = service;
 	}
 	@RequestMapping("toupload")
-	public String toupload(){
+	public String toupload(HttpServletRequest request){
+		String status = (String) request.getSession().getAttribute("languageStatus");
+		if(status == null){
+			status = "0";
+		}
+		String content = baiZhiPageService.queryContentByPageNameAndStatus("upload.jsp", status);
+		String[] contents = content.split("_");
+		request.setAttribute("contents",contents);
 		return "/upload";
 	}
 	@RequestMapping("upload")

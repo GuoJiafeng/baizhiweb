@@ -33,6 +33,9 @@ public class BaiZhiOrderController {
 	@RequestMapping("toorder")
 	public String toapp(HttpServletRequest request){
 		String status = (String) request.getSession().getAttribute("languageStatus");
+		if(status == null){
+			status = "0";
+		}
 		String content = baiZhiPageService.queryContentByPageNameAndStatus("order.jsp", status);
 		String[] contents = content.split("_");
 		request.setAttribute("contents",contents);

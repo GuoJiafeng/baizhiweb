@@ -7,6 +7,7 @@ header{
 		width: 100%;
 		height: 800px;
 		position: relative;
+		box-sizing: border-box;
 		/*overflow: hidden;*/
 	}
 	.header>#banner{
@@ -30,13 +31,15 @@ header{
 	.header .login_right{
 		background-color: #fff;
 		width: 620px;
-		height: 550px;
+		height: 500px;
 		position: absolute;
 		z-index: 4;
 		right: 0;
 		bottom: 126px;	
 		text-align: center;
 		font-family: SimHei;
+		box-sizing: border-box;
+		margin-top: 40px;
 	}
 	.login_right>ul{
 		

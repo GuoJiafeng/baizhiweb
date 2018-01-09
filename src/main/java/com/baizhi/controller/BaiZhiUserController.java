@@ -32,6 +32,9 @@ public class BaiZhiUserController {
 	@RequestMapping("tologin")
 	public String toupload(HttpServletRequest request){
 		String status = (String) request.getSession().getAttribute("languageStatus");
+		if(status == null){
+			status = "0";
+		}
 		String content = baiZhiPageService.queryContentByPageNameAndStatus("login.jsp", status);
 		String[] contents = content.split("_");
 		request.setAttribute("contents",contents);
@@ -40,6 +43,9 @@ public class BaiZhiUserController {
 	@RequestMapping("toreg")
 	public String toreg(HttpServletRequest request){
 		String status = (String) request.getSession().getAttribute("languageStatus");
+		if(status == null){
+			status = "0";
+		}
 		String content = baiZhiPageService.queryContentByPageNameAndStatus("reg.jsp", status);
 		String[] contents = content.split("_");
 		request.setAttribute("contents",contents);
@@ -49,17 +55,18 @@ public class BaiZhiUserController {
 	public String login(HttpSession session,String username,String password){
 		BaiZhiUser user = service.login(username, password);
 		session.setAttribute("user", user);
-		return "forword:tomain";
+		return "forward:/user/tomain";
 	}
 	@RequestMapping("reg")
 	public String reg(HttpSession session,BaiZhiUser user){
 		BaiZhiUser reg = service.reg(user);
 		session.setAttribute("user", reg);
-		return "forword:/user/tomain";
+		return "forward:/user/tomain";
 	}
 	@RequestMapping("tomain")
 	public String toMain(HttpServletRequest request){
 		String status = (String) request.getSession().getAttribute("languageStatus");
+		if(status == null) status = "0";
 		String content = baiZhiPageService.queryContentByPageNameAndStatus("main.jsp", status);
 		String[] contents = content.split("_");
 		request.setAttribute("contents",contents);

@@ -10,6 +10,27 @@
     <link rel="stylesheet" type="text/css" href="${base_path}/css/mainRiver.css"/>
     <link rel="stylesheet" type="text/css" href="${base_path}/css/webStyle1.css"/>
     <script type="text/javascript" src="${base_path}/js/jquery-1.8.3.min.js"></script>
+    <style type="text/css">
+        .footer{
+            position: absolute;
+            top: 90%;
+            width: 100%;
+        }
+        .priceC{
+            position: absolute;
+            top: 23px;
+            right: 70px;
+            height: 40px;
+            width: 140px;
+            border: 1px solid #E6E6E6;
+            background-color: #F8FFC0;
+            border-radius: 3px;
+            color: #fccf80;
+        }
+        .select_sum_last{
+            position: relative;
+        }
+    </style>
     <script type="text/javascript">
         $(function () {
             $("#getPrice").click(function () {
@@ -33,7 +54,7 @@
                     success: function (result) {
                         alert("成功获取价格，将显示在页面中！")
                         alert(result)
-                        $("#showPrice").text("价格：" + result);
+                        $("#showPrice").text("price：" + result);
                     }
                 }
             )
@@ -74,9 +95,9 @@
             </li>
 
 
-            <li class="select_sum">
-                <span id="showPrice">价格1</span>
-                <input type="button" name="" id="getPrice" value="提交"/>
+            <li class="select_sum select_sum_last">
+                <span id="showPrice">price:${price}</span>
+                <input  class="priceC" type="button" id="getPrice" value="calculation"/>
             </li>
         </ul>
 
@@ -84,66 +105,8 @@
         <p class="submit"><input type="submit" name="" id="" value=""/></p>
     </div>
 </form>
-
-<footer>
-
-    <div id="middle_footer">
-        <ul class="out">
-            <li>
-                <p><a href="#">Guudjob Worldwide SL</a></p>
-                <p><a href="#">Plaza Carlos Trias Bertrain,</a></p>
-                <p><a href="#">7</a></p>
-                <p><a href="#">Madrid,Esparia</a></p>
-                <p>
-                    <img src="${base_path}/img/face.png"/>
-                    <img src="${base_path}/img/wic.png"/>
-                    <img src="${base_path}/img/wifi.png"/>
-                </p>
-                <br/>
-                <p><a href="#">Esparnol | English</a></p>
-
-            </li>
-            <li>
-                <p><a href="#">
-                    GuuBjob</a>
-                </p>
-                <p><a href="#">Sorbre Guudjob</a></p>
-                <p><a href="#">Equipo</a></p>
-                <p><a href="#">Prensa & Noticias</a></p>
-                <p><a href="#">Agradecimientos</a></p>
-                <p><a href="#">Contacto</a></p>
-                <p><a href="#">Privacidad</a></p>
-                <p><a href="#">Embajadores</a></p>
-            </li>
-            <li>
-                <p><a href="#">
-                    GuuBjob APP</a>
-                </p>
-                <p><a href="#">Reconocimiento Laboral</a></p>
-                <p><a href="#">Reputacion Profesional</a></p>
-                <p><a href="#">Blog</a></p>
-                <p><a href="#">Presonal Branding</a></p>
-                <p><a href="#">Academy</a></p>
-                <p><a href="#">ios & Android</a></p>
-                <p><a href="#">Video Tutoriales</a></p>
-
-            </li>
-            <li>
-                <p><a href="#">
-                    EMPRESAS</a>
-                </p>
-                <p><a href="#">Soluciones</a></p>
-                <p><a href="#">Reconocimeento Cliente</a></p>
-                <p><a href="#">Reconocimeento Intemo</a></p>
-                <p><a href="#">CX Academy</a></p>
-                <p><a href="#">Logos y pegatinas</a></p>
-            </li>
-        </ul>
-    </div>
-    <div id="bottom_footer">
-        Registration:000000000
-    </div>
-</footer>
-
+<div class="footer">
+<jsp:include page="footer.jsp"/>
+</div>
 </body>
 </html>

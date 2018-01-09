@@ -1,12 +1,5 @@
-<%@page pageEncoding="UTF-8" contentType="text/html; UTF-8" isELIgnored="false" %>
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title></title>
-		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script> 
+	    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
 		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<style type="text/css">
 			*{
@@ -104,7 +97,7 @@
 			<!--  图标盒子 -->
      		 <div class="logo col-sm-4">
      		 	<div class="logoImg hidden-xs">
-     		 		<img src="img/login.png" alt="商标">
+     		 		<img src="${base_path}/img/login.png" alt="商标">
      		 	</div>
      		 	<div class="logoInfo visible-lg">
      		 		<p>
@@ -116,10 +109,10 @@
      		 <!--  导航栏盒子 -->
 		     <div class="Navbar col-sm-6 col-xs-6 hidden-xs">
 		     	<ul>
-		     		<li><a>Make an Appointment ${ 2 }</a></li>
-		     		<li><a>Pricing ${ 3 } </a></li>
-		     		<li><a>How it works ${ 4 }</a></li>
-		     		<li style="padding-right: 0px;"><img class="imgU" src="img/user.png" alt="头像" /><a>Land</a></li>
+                    <li><a href="${base_path}/upload.jsp">Make an Appointment ${ 2 }</a></li>
+                    <li><a href="${base_path}/order.jsp">Pricing ${ 3 }</a></li>
+		     		<li><a href="${base_path}/download.jsp">How it works ${ 4 }</a></li>
+		     		<li style="padding-right: 0px;"><img class="imgU" src="${base_path}/img/user.png" alt="touxiang" /><a href="${base_path}/login.jsp">Land</a></li>
 		     	</ul>
 		     </div>
 		     <!-- 自适应手机导航  -->
@@ -140,15 +133,14 @@
   		 	<div class="row" id="xsUlD">
 	   		 	<div class="xsUl visible-xs" id="xsUl">
 			     	<ul class="nav nav-pills nav-stacked">
-			     		<li><a>Make an Appointment ${ 2 }</a></li>
-			     		<li><a>Pricing ${ 3 }</a></li>
-			     		<li><a>How it works ${ 4 }</a></li>
+			     		<li><a href="${base_path}/upload.jsp">Make an Appointment ${ 2 }</a></li>
+			     		<li><a href="${base_path}/order.jsp">Pricing ${ 3 }</a></li>
+			     		<li><a href="${base_path}/download.jsp">How it works ${ 4 }</a></li>
 			     		<li style="padding-right: 0px;"><a>Land</a></li>
 			     	</ul>
 			     </div>
    			</div>
 		</div>
-	</body>
 		<script type="text/javascript">
 			var flag=true;
 			$("#xsUlD").hide();
@@ -162,4 +154,4 @@
 				}
 			});			
 		</script>
-</html>
+

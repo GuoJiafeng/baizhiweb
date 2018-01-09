@@ -11,6 +11,13 @@
     <link rel="stylesheet" type="text/css" href="${base_path}/css/webStyle.css"/>
 
     <script type="text/javascript" src="${base_path}/js/jquery-1.8.3.min.js"></script>
+    <style type="text/css">
+        .footer{
+            position: absolute;
+            top: 90%;
+            width: 100%;
+        }
+    </style>
     <script type="text/javascript">
 
         $(function () {
@@ -59,7 +66,9 @@
         <ul>
             <li class="s_upload">
                 <span>Please upload your demand book!</span>
+                <label for="up_file"><img src="../img/s_upload.png" alt="upload"></label>
                 <p><input id="up_file" type="file" name="up_file"/></p>
+                <%--background: url(../img/s_upload.png) no-repeat center;--%>
             </li>
 
             <li class="select_sum">
@@ -74,66 +83,8 @@
         <p class="submit"><input type="submit" name="" id="submit_upload" value=""/></p>
     </div>
 </form>
-
-<footer>
-
-    <div id="middle_footer">
-        <ul class="out">
-            <li>
-                <p><a href="#">Guudjob Worldwide SL</a></p>
-                <p><a href="#">Plaza Carlos Trias Bertrain,</a></p>
-                <p><a href="#">7</a></p>
-                <p><a href="#">Madrid,Esparia</a></p>
-                <p>
-                    <img src="${base_path}/img/face.png"/>
-                    <img src="${base_path}/img/wic.png"/>
-                    <img src="${base_path}/img/wifi.png"/>
-                </p>
-                <br/>
-                <p><a href="#">Esparnol | English</a></p>
-
-            </li>
-            <li>
-                <p><a href="#">
-                    GuuBjob</a>
-                </p>
-                <p><a href="#">Sorbre Guudjob</a></p>
-                <p><a href="#">Equipo</a></p>
-                <p><a href="#">Prensa & Noticias</a></p>
-                <p><a href="#">Agradecimientos</a></p>
-                <p><a href="#">Contacto</a></p>
-                <p><a href="#">Privacidad</a></p>
-                <p><a href="#">Embajadores</a></p>
-            </li>
-            <li>
-                <p><a href="#">
-                    GuuBjob APP</a>
-                </p>
-                <p><a href="#">Reconocimiento Laboral</a></p>
-                <p><a href="#">Reputacion Profesional</a></p>
-                <p><a href="#">Blog</a></p>
-                <p><a href="#">Presonal Branding</a></p>
-                <p><a href="#">Academy</a></p>
-                <p><a href="#">ios & Android</a></p>
-                <p><a href="#">Video Tutoriales</a></p>
-
-            </li>
-            <li>
-                <p><a href="#">
-                    EMPRESAS</a>
-                </p>
-                <p><a href="#">Soluciones</a></p>
-                <p><a href="#">Reconocimeento Cliente</a></p>
-                <p><a href="#">Reconocimeento Intemo</a></p>
-                <p><a href="#">CX Academy</a></p>
-                <p><a href="#">Logos y pegatinas</a></p>
-            </li>
-        </ul>
-    </div>
-    <div id="bottom_footer">
-        Registration:000000000
-    </div>
-</footer>
-
+<div class="footer">
+    <jsp:include page="footer.jsp"/>
+</div>
 </body>
 </html>

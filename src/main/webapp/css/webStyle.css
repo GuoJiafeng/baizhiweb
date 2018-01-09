@@ -42,7 +42,7 @@
 	
 	/*第一排*/
 	.section_text>ul>.s_upload{
-		
+		position: relative;
 		width: 1080px;
 		height: 90px;
 	}
@@ -65,17 +65,20 @@
 		outline: none;
 		border: none;
 		display: block;
-		width: 140px;
-		height: 40px;
-		background: url(../img/s_upload.png) no-repeat center;
+		width: 0px;
+		height: 0px;
 	}
-	
+	.section_text>ul>.s_upload label {
+		position: absolute;
+		top:24px
+	}
 	
 	/*第二、第三、第四排共有属性*/
 	.section_text>ul>.select_sum{
 		width: 1080px;
 		height: 90px;
 		border: none;
+
 	}
 	.section_text>ul>.select_sum>span{
 		float: left;
@@ -99,7 +102,7 @@
 	.section_text>ul>.select_sum>select option{
 		color: #fccf80;
 	}
-	
+
 	/*s_money一排自有属性*/
 	.section_text>ul>.s_money{
 		height: 90px;
