@@ -90,27 +90,27 @@
         <p class="sing_head"><img src="${base_path}/img/sign_up.png"/></p>
         <p class="sing_bottom_text">
 				<span>
-					Already have an account?${requestScope.contens[0]}
+					${requestScope.contents[0]}
 				</span>
-            <a href="${base_path}/user/tologin.do"> Log In</a>
+            <a href="${base_path}/user/tologin.do"> ${requestScope.contents[1]}</a>
         </p>
         <!--åå²çº¿-->
         <p class="sign_or"></p>
         <ul>
             <li class="section_input">
-                <span>USERNAME${requestScope.contens[0]}</span><br/>
+                <span>${requestScope.contents[2]}</span><br/>
                 <input type="text" name="username" id="username" value=""/>
             </li>
             <li class="section_input">
-                <span>PASSWORD${requestScope.contens[0]}</span><br/>
+                <span>${requestScope.contents[3]}</span><br/>
                 <input type="password" name="password" id="password" value=""/>
             </li>
             <li class="section_input">
-                <span>EMAIL${requestScope.contens[0]}</span><br/>
+                <span>${requestScope.contents[4]}</span><br/>
                 <input type="" name="email" id="email" value=""/>
             </li>
             <li class="section_input">
-                <span>PHONE${requestScope.contens[0]}</span><br/>
+                <span>${requestScope.contents[5]}</span><br/>
                 <input type="" name="phone" id="phone" value=""/>
             </li>
             <li class="section_input_submit">

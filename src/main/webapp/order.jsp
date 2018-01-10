@@ -72,21 +72,21 @@
     <div class="section_text">
         <ul>
             <li class="select_yes2 select_sum">
-                <span>What kind of software do you want to do${requestScope.contens[0]}</span>
+                <span>${requestScope.contents[0]}</span>
                 <select name="type" id="type">
                     <option value="Web">Web</option>
                     <option value="App">App</option>
                 </select>
             </li>
             <li class="select_yes select_sum">
-                <span>Do you have a you requirement book?${requestScope.contens[1]}</span>
+                <span>${requestScope.contents[1]}</span>
                 <select name="demand" id="demand">
                     <option value="1">YES</option>
                     <option value="0">NO</option>
                 </select>
             </li>
             <li class="select_sum">
-                <span>The number of pages you want${requestScope.contens[2]}</span>
+                <span>${requestScope.contents[2]}</span>
                 <select name="number" id="number">
                     <option value="1-5">1-5</option>
                     <option value="5-10">5-10</option>
@@ -96,7 +96,7 @@
 
 
             <li class="select_sum select_sum_last">
-                <span id="showPrice">price:${price}${requestScope.contens[3]}</span>
+                <span id="showPrice">${price}${requestScope.contents[3]}</span>
                 <input  class="priceC" type="button" id="getPrice" value="calculation"/>
             </li>
         </ul>

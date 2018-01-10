@@ -1,4 +1,4 @@
-<%@ page pageEncoding="UTF-8" contentType="text/html;charest=UTF8" %>
+<%@ page pageEncoding="UTF-8" contentType="text/html;charest=UTF8" isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:set var="base_path" value="${pageContext.request.contextPath}"></c:set>
 <html>
@@ -96,22 +96,22 @@
                     <ul>
                         <li class="font_login"><img src="${base_path}/img/lOG-IN.png"/></li>
                         <li class="font_login2">
-                            <span>Do not have an account?${requestScope.contens[0]}</span>
-                            <a href="${base_path}/user/toreg.do"> Sign Up${requestScope.contens[1]}</a>
+                            <span>${requestScope.contents[0]}</span>
+                            <a href="${base_path}/user/toreg.do"> ${requestScope.contents[1]}</a>
                         </li>
                         <li class="or"></li>
                         <li class="span_input">
-                            <span>USERNAME${requestScope.contens[3]}</span>
+                            <span>${requestScope.contents[2]}</span>
                             <input type="text" name="username" id="username" value=""/>
                         </li>
                         <li class="span_input">
-                            <span class="pw">PASSWORD${requestScope.contens[4]}</span>
+                            <span class="pw">${requestScope.contents[3]}</span>
                             <input type="password" name="password" id="password" value=""/>
                         </li>
                         <li class="protocol">
                             <input type="checkbox" name="" id="" value=""/>
-                            <span>REMEMBER ME${requestScope.contens[5]}</span>
-                            <a href="#">Forgot password?${requestScope.contens[6]}</a>
+                            <span>${requestScope.contents[4]}</span>
+                            <a href="#">${requestScope.contents[5]}</a>
                         </li>
                         <li class="submit">
                             <input type="button" name="" id="sbmt" value=""/>
