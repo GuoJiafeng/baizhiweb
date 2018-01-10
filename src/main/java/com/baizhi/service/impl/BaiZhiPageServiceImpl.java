@@ -17,14 +17,10 @@ public class BaiZhiPageServiceImpl implements BaiZhiPageService {
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
     public String queryContentByPageNameAndStatus(String pageName, String Status) {
-        String content = null;
         if(Status.equals("0")){
-            content = baiZhiPageDAO.queryEnglishByPageName(pageName);
-        }if(Status.equals("1")){
-            content = baiZhiPageDAO.queryChineseByPageName(pageName);
-        }if(content == null){
-            throw new RuntimeException("非法参数");
+            return baiZhiPageDAO.queryEnglishByPageName(pageName);
+        }else {
+            return baiZhiPageDAO.queryChineseByPageName(pageName);
         }
-        return content;
     }
 }

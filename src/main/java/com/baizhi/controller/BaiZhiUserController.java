@@ -55,13 +55,13 @@ public class BaiZhiUserController {
 	public String login(HttpSession session,String username,String password){
 		BaiZhiUser user = service.login(username, password);
 		session.setAttribute("user", user);
-		return "forward:/user/tomain";
+		return "redirect:/user/tomain";
 	}
 	@RequestMapping("reg")
 	public String reg(HttpSession session,BaiZhiUser user){
 		BaiZhiUser reg = service.reg(user);
 		session.setAttribute("user", reg);
-		return "forward:/user/tomain";
+		return "redirect:/user/tomain";
 	}
 	@RequestMapping("tomain")
 	public String toMain(HttpServletRequest request){
