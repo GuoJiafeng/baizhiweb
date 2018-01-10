@@ -31,22 +31,22 @@
 					<li>
 						<div class="describe">
 							<p>We Build Your${requestScope.contens[0]}</p>
-							<p>WebSite and APP${requestScope.contens[0]}</p>
+							<p>WebSite and APP${requestScope.contens[1]}</p>
 						</div>
 						<div class="show_img"></div>
 					</li>
 					<li>
 						<div class="describe">
-							<p>Transparent${requestScope.contens[0]}</p>
-							<p>Pricing${requestScope.contens[0]}</p>
+							<p>Transparent${requestScope.contens[2]}</p>
+							<p>Pricing${requestScope.contens[3]}</p>
 						</div>
 						<div class="show_img"></div>
 					</li>
 					<li>
 						<div class="describe">
-							<p>Hign quality${requestScope.contens[0]}</p>
-							<p>consepts,designs${requestScope.contens[0]}</p>
-							<p>and code${requestScope.contens[0]}</p>
+							<p>Hign quality${requestScope.contens[4]}</p>
+							<p>consepts,designs${requestScope.contens[5]}</p>
+							<p>and code${requestScope.contens[6]}</p>
 						</div>
 						<div class="show_img"></div>
 					</li>
