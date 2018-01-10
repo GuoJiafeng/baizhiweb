@@ -8,7 +8,13 @@
 		<title></title>
 		<!--引入外部样式-->
 		<link rel="stylesheet" type="text/css" href="${base_path}/css/mainRiver.css"/>
-		
+		<style type="text/css">
+			.footer{
+				position: relative;
+				top: 90%;
+				width: 100%;
+			}
+		</style>
 	</head>
 	<body>
 		<!--导航栏信息-->
@@ -24,37 +30,37 @@
 				<ul class="schema ">
 					<li>
 						<div class="describe">
-							<p>We Build Your</p>
-							<p>WebSite and APP</p>
+							<p>We Build Your${requestScope.contens[0]}</p>
+							<p>WebSite and APP${requestScope.contens[0]}</p>
 						</div>
 						<div class="show_img"></div>
 					</li>
 					<li>
 						<div class="describe">
-							<p>Transparent</p>
-							<p>Pricing</p>
+							<p>Transparent${requestScope.contens[0]}</p>
+							<p>Pricing${requestScope.contens[0]}</p>
 						</div>
 						<div class="show_img"></div>
 					</li>
 					<li>
 						<div class="describe">
-							<p>Hign quality</p>
-							<p>consepts,designs</p>
-							<p>and code</p>
+							<p>Hign quality${requestScope.contens[0]}</p>
+							<p>consepts,designs${requestScope.contens[0]}</p>
+							<p>and code${requestScope.contens[0]}</p>
 						</div>
 						<div class="show_img"></div>
 					</li>
 					<li>
 						<div class="describe">
-							<p>Personal project</p>
-							<p>manager</p>
+							<p>Personal project${requestScope.contens[0]}</p>
+							<p>manager${requestScope.contens[0]}</p>
 						</div>
 						<div class="show_img"></div>
 					</li>
 					<li>
 						<div class="describe">
-							<p>Online tikect</p>
-							<p>system</p>
+							<p>Online tikect${requestScope.contens[0]}</p>
+							<p>system${requestScope.contens[0]}</p>
 						</div>
 						<div class="show_img"></div>
 					</li>
@@ -69,19 +75,19 @@
 					<div id="firstSec_top">
 						<hr />
 						<div>
-							We build Your Website and App
+							We build Your Website and App${requestScope.contens[0]}
 						</div>
 						<hr />
 					</div>
 					<div id="firstSec_bottom">
-						<h2>What do you need?</h2>
+						<h2>What do you need?${requestScope.contens[0]}</h2>
 						<div>
 							<div class="left_float">
 								<div class="websit_top">
 									<img src="${base_path}/img/website.png" />
 								</div>
 								<div class="websit_bottom">
-									Website
+									Website${requestScope.contens[0]}
 								</div>
 							</div>
 							<div class="right_float">
@@ -89,7 +95,7 @@
 									<img src="${base_path}/img/app.png" />
 								</div>
 								<div class="app_bottom">
-									App
+									App${requestScope.contens[0]}
 								</div>
 							</div>
 						</div>
@@ -100,24 +106,24 @@
 					<div id="secondSec_top">
 						<hr />
 						<div>
-							We can do if for you
+							We can do if for you${requestScope.contens[0]}
 						</div>
 						<hr />
 					</div>
 					<div id="secondSec_middle">
 						<div class="left_float">
 							<div class="shade">
-								Our excellent team
+								Our excellent team${requestScope.contens[0]}
 							</div>
 						</div>
 						<div class="left_float">
 							<div class="shade">
-								Excellent service
+								Excellent service${requestScope.contens[0]}
 							</div>
 						</div>
 						<div class="left_float">
 							<div class="shade">
-								Metting what you want
+								Metting what you want${requestScope.contens[0]}
 							</div>
 						</div>
 					</div>
@@ -131,7 +137,7 @@
 					<div id="thirdSec_top">
 						<hr />
 						<div>
-							The service you have to have
+							The service you have to have${requestScope.contens[0]}
 						</div>
 						<hr />
 					</div>
@@ -139,43 +145,43 @@
 						<li>
 							<ul class="in_ul">
 								<li></li>
-								<li>Efficient</li>
-								<li>Commucation</li>
+								<li>Efficient${requestScope.contens[0]}</li>
+								<li>Commucation${requestScope.contens[0]}</li>
 							</ul>
 						</li>
 						<li>
 							<ul class="in_ul">
 								<li></li>
-								<li>A perfect</li>
-								<li>Demostration</li>
+								<li>A perfect${requestScope.contens[0]}</li>
+								<li>Demostration${requestScope.contens[0]}</li>
 							</ul>
 						</li>
 						<li>
 							<ul class="in_ul">
 								<li></li>
-								<li>A Pleasant</li>
-								<li>Metting</li>
+								<li>A Pleasant${requestScope.contens[0]}</li>
+								<li>Metting${requestScope.contens[0]}</li>
 							</ul>
 						</li>
 						<li>
 							<ul class="in_ul">
 								<li></li>
-								<li>A Largin Number</li>
-								<li>Of Partners</li>
+								<li>A Largin Number${requestScope.contens[0]}</li>
+								<li>Of Partners${requestScope.contens[0]}</li>
 							</ul>
 						</li>
 						<li>
 							<ul class="in_ul">
 								<li></li>
-								<li>Poineer</li>
-								<li>Of EnterPrise</li>
+								<li>Poineer${requestScope.contens[0]}</li>
+								<li>Of EnterPrise${requestScope.contens[0]}</li>
 							</ul>
 						</li>
 					</ul>
 				</div>
 				<div style="height: 892px;box-sizing:border-box;padding-top: 50px;" class="fourthSec">
 					<div id="play">
-						<h1>how it works</h1>
+						<h1>how it works${requestScope.contens[0]}</h1>
 						<img src="${base_path}/img/bofang_big.png" />
 						<div>
 							<img src="${base_path}/img/bofang_little.png" />
@@ -189,33 +195,33 @@
 						<li>
 							<ul class="col_ul">
 								<li>
-									<p>Traditional</p>
-									<p>Way</p>
+									<p>Traditional${requestScope.contens[0]}</p>
+									<p>Way${requestScope.contens[0]}</p>
 								</li>
 								<li class="res">
-									<h3>Technical Resources</h3>
-									<p>Professional Apihub manages tools</p>
-									<p>through the implement tation</p>
+									<h3>Technical Resources${requestScope.contens[0]}</h3>
+									<p>Professional Apihub manages tools${requestScope.contens[0]}</p>
+									<p>through the implement tation${requestScope.contens[0]}</p>
 								</li>
 								<li class="res">
-									<h3>Technical Resources</h3>
-									<p>Professional Apihub manages tools</p>
-									<p>through the implement tation</p>
+									<h3>Technical Resources${requestScope.contens[0]}</h3>
+									<p>Professional Apihub manages tools${requestScope.contens[0]}</p>
+									<p>through the implement tation${requestScope.contens[0]}</p>
 								</li>
 								<li class="res">
-									<h3>Technical Resources</h3>
-									<p>Professional Apihub manages tools</p>
-									<p>through the implement tation</p>
+									<h3>Technical Resources${requestScope.contens[0]}</h3>
+									<p>Professional Apihub manages tools${requestScope.contens[0]}</p>
+									<p>through the implement tation${requestScope.contens[0]}</p>
 								</li>
 								<li class="res">
-									<h3>Technical Resources</h3>
-									<p>Professional Apihub manages tools</p>
-									<p>through the implement tation</p>
+									<h3>Technical Resources${requestScope.contens[0]}</h3>
+									<p>Professional Apihub manages tools${requestScope.contens[0]}</p>
+									<p>through the implement tation${requestScope.contens[0]}</p>
 								</li>
 								<li class="res">
-									<h3>Technical Resources</h3>
-									<p>Professional Apihub manages tools</p>
-									<p>through the implement tation</p>
+									<h3>Technical Resources${requestScope.contens[0]}</h3>
+									<p>Professional Apihub manages tools${requestScope.contens[0]}</p>
+									<p>through the implement tation${requestScope.contens[0]}</p>
 								</li>
 								<li ></li>
 							</ul>
@@ -223,33 +229,33 @@
 						<li>
 							<ul class="col_ul mode">
 								<li>
-									<p>General </p>
-									<p>Mode</p>
+									<p>General${requestScope.contens[0]} </p>
+									<p>Mode${requestScope.contens[0]}</p>
 								</li>
 								<li class="res dui">
-									<h3>Technical Resources</h3>
-									<p>Professional Apihub manages tools</p>
-									<p>through the implement tation</p>
+									<h3>Technical Resources${requestScope.contens[0]}</h3>
+									<p>Professional Apihub manages tools${requestScope.contens[0]}</p>
+									<p>through the implement tation${requestScope.contens[0]}</p>
 								</li>
 								<li class="res dui">
-									<h3>Technical Resources</h3>
-									<p>Professional Apihub manages tools</p>
-									<p>through the implement tation</p>
+									<h3>Technical Resources${requestScope.contens[0]}</h3>
+									<p>Professional Apihub manages tools${requestScope.contens[0]}</p>
+									<p>through the implement tation${requestScope.contens[0]}</p>
 								</li>
 								<li class="res dui">
-									<h3>Technical Resources</h3>
-									<p>Professional Apihub manages tools</p>
-									<p>through the implement tation</p>
+									<h3>Technical Resources${requestScope.contens[0]}</h3>
+									<p>Professional Apihub manages tools${requestScope.contens[0]}</p>
+									<p>through the implement tation${requestScope.contens[0]}</p>
 								</li>
 								<li class="res">
-									<h3>Technical Resources</h3>
-									<p>Professional Apihub manages tools</p>
-									<p>through the implement tation</p>
+									<h3>Technical Resources${requestScope.contens[0]}</h3>
+									<p>Professional Apihub manages tools${requestScope.contens[0]}</p>
+									<p>through the implement tation${requestScope.contens[0]}</p>
 								</li>
 								<li class="res">
-									<h3>Technical Resources</h3>
-									<p>Professional Apihub manages tools</p>
-									<p>through the implement tation</p>
+									<h3>Technical Resources${requestScope.contens[0]}</h3>
+									<p>Professional Apihub manages tools${requestScope.contens[0]}</p>
+									<p>through the implement tation${requestScope.contens[0]}</p>
 								</li>
 								<li ></li>
 							</ul>
@@ -260,29 +266,29 @@
 									<p>Our Way</p>
 								</li>
 								<li class="res">
-									<h3>Technical Resources</h3>
-									<p>Professional Apihub manages tools</p>
-									<p>through the implement tation</p>
+									<h3>Technical Resources${requestScope.contens[0]}</h3>
+									<p>Professional Apihub manages tools${requestScope.contens[0]}</p>
+									<p>through the implement tation${requestScope.contens[0]}</p>
 								</li>
 								<li class="res">
-									<h3>Technical Resources</h3>
-									<p>Professional Apihub manages tools</p>
-									<p>through the implement tation</p>
+									<h3>Technical Resources${requestScope.contens[0]}</h3>
+									<p>Professional Apihub manages tools${requestScope.contens[0]}</p>
+									<p>through the implement tation${requestScope.contens[0]}</p>
 								</li>
 								<li class="res">
-									<h3>Technical Resources</h3>
-									<p>Professional Apihub manages tools</p>
-									<p>through the implement tation</p>
+									<h3>Technical Resources${requestScope.contens[0]}</h3>
+									<p>Professional Apihub manages tools${requestScope.contens[0]}</p>
+									<p>through the implement tation${requestScope.contens[0]}</p>
 								</li>
 								<li class="res">
-									<h3>Technical Resources</h3>
-									<p>Professional Apihub manages tools</p>
-									<p>through the implement tation</p>
+									<h3>Technical Resources${requestScope.contens[0]}</h3>
+									<p>Professional Apihub manages tools${requestScope.contens[0]}</p>
+									<p>through the implement tation${requestScope.contens[0]}</p>
 								</li>
 								<li class="res">
-									<h3>Technical Resources</h3>
-									<p>Professional Apihub manages tools</p>
-									<p>through the implement tation</p>
+									<h3>Technical Resources${requestScope.contens[0]}</h3>
+									<p>Professional Apihub manages tools${requestScope.contens[0]}</p>
+									<p>through the implement tation${requestScope.contens[0]}</p>
 								</li>
 								<li ></li>
 							</ul>
@@ -292,94 +298,8 @@
 				</div>
 			</div>
 		</section>
-		<footer>
-			<div id="top_footer">
-				<ul class="top_footer_img">
-					<li>
-						<img src="${base_path}/img/foot_pic1.png" />
-					</li>
-					<li>
-						<img src="${base_path}/img/foot_pic2.png" />
-					</li>
-					<li>
-						<img src="${base_path}/img/foot_pic3.png" />
-					</li>
-					<li>
-						<img src="${base_path}/img/foot_pic4.png" />
-					</li>
-					<li>
-						<img src="${base_path}/img/foot_pic5.png" />
-					</li>
-				</ul>
-				<div class="top_footer_num">
-					<div>1</div>
-					<hr />
-					<div>2</div>
-					<hr />
-					<div>3</div>
-					<hr />
-					<div>4</div>
-					<hr />
-					<div>5</div>
-				</div>
-			</div>
-			<div id="middle_footer">
-				<ul class="out">
-					<li>
-						<p><a href="#">Guudjob Worldwide SL</a></p>
-						<p><a href="#">Plaza Carlos Trias Bertrain,</a></p>
-						<p><a href="#">7</a></p>
-						<p><a href="#">Madrid,Esparia</a></p>
-						<p>
-							<img src="${base_path}/img/face.png" />
-							<img src="${base_path}/img/wic.png" />
-							<img src="${base_path}/img/wifi.png" />
-						</p>
-						<br />
-						<p><a href="#">Esparnol | English</a></p>
-						
-					</li>
-					<li>
-						<p><a href="#">
-							GuuBjob</a>
-						</p>
-						<p><a href="#">Sorbre Guudjob</a></p>
-						<p><a href="#">Equipo</a></p>
-						<p><a href="#">Prensa & Noticias</a></p>
-						<p><a href="#">Agradecimientos</a></p>
-						<p><a href="#">Contacto</a></p>
-						<p><a href="#">Privacidad</a></p>
-						<p><a href="#">Embajadores</a></p>
-					</li>
-					<li>
-						<p><a href="#">
-							GuuBjob APP</a>
-						</p>
-						<p><a href="#">Reconocimiento Laboral</a></p>
-						<p><a href="#">Reputacion Profesional</a></p>
-						<p><a href="#">Blog</a></p>
-						<p><a href="#">Presonal Branding</a></p>
-						<p><a href="#">Academy</a></p>
-						<p>	<a href="#">ios & Android</a></p>
-						<p><a href="#">Video Tutoriales</a></p>
-						
-					</li>
-					<li>
-						<p><a href="#">
-							EMPRESAS</a>
-						</p>
-						<p><a href="#">Soluciones</a></p>
-						<p><a href="#">Reconocimeento Cliente</a></p>
-						<p><a href="#">Reconocimeento Intemo</a></p>
-						<p><a href="#">CX Academy</a></p>
-						<p><a href="#">Logos y pegatinas</a></p>
-					</li>
-				</ul>
-			</div>
-			<div id="bottom_footer">
-				Registration:000000000
-			</div>
-		</footer>
-		
+		<div class="footer">
+	<jsp:include page="footer.jsp"/>
+		</div>
 	</body>
 </html>

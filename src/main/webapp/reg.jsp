@@ -90,7 +90,7 @@
         <p class="sing_head"><img src="${base_path}/img/sign_up.png"/></p>
         <p class="sing_bottom_text">
 				<span>
-					Already have an account?
+					Already have an account?${requestScope.contens[0]}
 				</span>
             <a href="${base_path}/user/tologin.do"> Log In</a>
         </p>
@@ -98,19 +98,19 @@
         <p class="sign_or"></p>
         <ul>
             <li class="section_input">
-                <span>USERNAME</span><br/>
+                <span>USERNAME${requestScope.contens[0]}</span><br/>
                 <input type="text" name="username" id="username" value=""/>
             </li>
             <li class="section_input">
-                <span>PASSWORD</span><br/>
+                <span>PASSWORD${requestScope.contens[0]}</span><br/>
                 <input type="password" name="password" id="password" value=""/>
             </li>
             <li class="section_input">
-                <span>EMAIL</span><br/>
+                <span>EMAIL${requestScope.contens[0]}</span><br/>
                 <input type="" name="email" id="email" value=""/>
             </li>
             <li class="section_input">
-                <span>PHONE</span><br/>
+                <span>PHONE${requestScope.contens[0]}</span><br/>
                 <input type="" name="phone" id="phone" value=""/>
             </li>
             <li class="section_input_submit">

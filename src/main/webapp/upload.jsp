@@ -65,14 +65,14 @@
 
         <ul>
             <li class="s_upload">
-                <span>Please upload your demand book!</span>
+                <span>Please upload your demand book!${requestScope.contens[0]}</span>
                 <label for="up_file"><img src="../img/s_upload.png" alt="upload"></label>
                 <p><input id="up_file" type="file" name="up_file"/></p>
                 <%--background: url(../img/s_upload.png) no-repeat center;--%>
             </li>
 
             <li class="select_sum">
-                <span>Please enter the requirement document description below</span>
+                <span>Please enter the requirement document description below${requestScope.contens[0]}</span>
             </li>
 
             <li class="select_sum">
