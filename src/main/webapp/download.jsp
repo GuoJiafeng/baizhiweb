@@ -41,8 +41,8 @@
 <form action="${base_path}/order/order.do" method="post">
     <div class="section_text">
         <ul>
-            <li><span>English_translation ${name}</span><a href="/file/download.do?fileName=English_translation.pptx">下载</a></li>
-            <li><span>中文流程 ${name}</span><a href="<c:url value="/file/download"/>?fileName=中文流程.pptx">下载</a></li>
+            <li><span>English_translation ${name}</span><a href="/file/download.do?fileName=English.pptx">下载</a></li>
+            <li><span>中文流程 ${name}</span><a href="<c:url value="/file/download"/>?fileName=Chinese.pptx">下载</a></li>
         </ul>
     </div>
 </form>
