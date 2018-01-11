@@ -33,21 +33,18 @@
         $(function () {
             ok1 = false;
             ok2 = false;
-            $("#username").blur(function () {
-                if ($(this).val().length >= 3 && $(this).val().length <= 12 && $(this).val() != '') {
+
+            $("#sbmt").click(function () {
+                if ($("#username").val().length >= 3 && $("#username").val().length <= 12 && $("#username").val() != '') {
                     ok1 = true;
                 } else {
                     alert('The username should be between 3-20 words(用户名应该为3-20位之间)');
                 }
-            });
-            $("#password").blur(function () {
-                if ($(this).val().length >= 6 && $(this).val().length <= 20 && $(this).val() != '') {
+                if ($("#password").val().length >= 6 && $("#password").val().length <= 20 && $("#password").val() != '') {
                     ok2 = true;
                 } else {
                     alert('The password should be between 6-20 words(密码应该为6-20位之间)');
                 }
-            });
-            $("#sbmt").click(function () {
                 if (${empty token}) {
                     $.ajax({
                         url: "${base_path}/user/createtoken",
@@ -55,8 +52,6 @@
                     });
                     if (ok1 && ok2) {
                         $("#log").submit();
-                    } else {
-                        alert("Your input is wrong, please correct and login(您的输入有误,请更正后登陆)")
                     }
                 } else {
                     $.ajax({
@@ -69,9 +64,7 @@
                             } else {
                                 if (ok1 && ok2) {
                                     $("#log").submit();
-                                } else {
-                                    alert("Your input is wrong, please correct and login(您的输入有误,请更正后登陆)")
-                                }
+                                } 
                             }
                         }
                     });
