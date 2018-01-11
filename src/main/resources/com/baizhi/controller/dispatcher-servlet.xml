@@ -40,5 +40,19 @@
     <mvc:resources location="/css/" mapping="/css/**"/>
     <mvc:resources location="/js/" mapping="/js/**"/>
     <mvc:resources location="/img/" mapping="/img/**"/>
+
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/order/order.do"/>
+            <bean class="com.baizhi.interceptor.LoginInteceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+    <!--<mvc:interceptors>-->
+        <!--<mvc:interceptor>-->
+            <!--<mvc:mapping path="*"/>-->
+            <!--<bean class="com.baizhi.interceptor.ExceptionInterceptor"/>-->
+        <!--</mvc:interceptor>-->
+    <!--</mvc:interceptors>-->
+
 </beans>
 	
