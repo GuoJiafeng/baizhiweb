@@ -37,7 +37,6 @@
                 //验证手机号格式
                 if ($("#phone").val().length = 11 && $("#phone").val() != '') {
                     ok4 = true;
-                    alert(123);
                 } else {
                     alert('Please enter 11 mobile phone numbers(请输入11位手机号)');
                 }
