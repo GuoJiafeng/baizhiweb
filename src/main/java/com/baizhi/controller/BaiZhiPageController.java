@@ -16,9 +16,6 @@ public class BaiZhiPageController {
         String[] path = str.split("/");
         String string = path[path.length-2];
         String pageName = path[path.length-1];
-        System.out.println(str);
-        System.out.println(string);
-        System.out.println(pageName);
         String status = (String) session.getAttribute("languageStatus");
         if(status == null){
             session.setAttribute("languageStatus","1");

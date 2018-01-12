@@ -37,11 +37,6 @@ public class BaiZhiUserController {
 		}
 		String content = baiZhiPageService.queryContentByPageNameAndStatus("login.jsp", status);
 		String[] contents = content.split("_");
-		for (int i = 0; i < contents.length; i++) {
-			String s = contents[i];
-			System.out.println(s);
-
-		}
 		request.setAttribute("contents",contents);
 		return "login";
 	}
