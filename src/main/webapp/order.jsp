@@ -33,6 +33,18 @@
     </style>
     <script type="text/javascript">
         $(function () {
+            $.get("${base_path}/select/selectByPageName?source=order.jsp",function(result){
+                console.log(result)
+                var type=["type","demand","number"];
+               for(var i in result){
+                   var data = result[i].options.split("_");
+                   data.forEach(function (t) {
+                       console.log(t)
+                       $("#"+type[i]).append("<option value=''>"+t+"</option>");
+                   })
+               }
+            },"json")
+
             $("#getPrice").click(function () {
                 getPrice();
             })
@@ -74,23 +86,23 @@
             <li class="select_yes2 select_sum">
                 <span>${requestScope.contents[0]}</span>
                 <select name="type" id="type">
-                    <option value="Web">Web</option>
-                    <option value="App">App</option>
+                    <%--<option value="Web">Web</option>
+                    <option value="App">App</option>--%>
                 </select>
             </li>
             <li class="select_yes select_sum">
                 <span>${requestScope.contents[1]}</span>
                 <select name="demand" id="demand">
-                    <option value="1">YES</option>
-                    <option value="0">NO</option>
+                    <%--<option value="1">YES</option>
+                    <option value="0">NO</option>--%>
                 </select>
             </li>
             <li class="select_sum">
                 <span>${requestScope.contents[2]}</span>
                 <select name="number" id="number">
-                    <option value="1-5">1-5</option>
+                    <%--<option value="1-5">1-5</option>
                     <option value="5-10">5-10</option>
-                    <option value="10以上">10以上</option>
+                    <option value="10以上">10以上</option>--%>
                 </select>
             </li>
 
