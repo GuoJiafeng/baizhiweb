@@ -29,8 +29,10 @@ public class BaiZhiOrderServiceImpl implements BaiZhiOrderService {
 
     @Override
     public Double getPrice(BaiZhiOrder order) {
-        double a, b, c = 0;
-        String demand = order.getDemand();
+        Double type = new Double(order.getType());
+        Double demand = new Double(order.getDemand());
+        Double number = new Double(order.getNumber());
+        /*String demand = order.getDemand();
         if (demand.equals("1")) a = 2;
         else a = 1;
         String number = order.getNumber();
@@ -39,9 +41,9 @@ public class BaiZhiOrderServiceImpl implements BaiZhiOrderService {
         else b = 10;
         String type = order.getType();
         if (type.equals("Web")) c = 1;
-        else c = 2;
+        else c = 2;*/
 
-        Double price = a * b * c;
+        Double price = type * demand * number;
         return price;
     }
 

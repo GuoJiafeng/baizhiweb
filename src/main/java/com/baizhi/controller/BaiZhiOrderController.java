@@ -44,20 +44,12 @@ public class BaiZhiOrderController {
 	@RequestMapping("order")
 	public String order(HttpSession session,BaiZhiOrder order){
 		BaiZhiUser user=(BaiZhiUser) session.getAttribute("user");
-		double a,b,c=0;
-		String demand = order.getDemand();
-		if(demand.equals("1"))a=2;
-		else a=1;
-		String number = order.getNumber();
-		if(number.equals("1-5"))b=1;
-		else if(number.equals("5-10"))b=5;
-		else b=10;
-		String type = order.getType();
-		if(type.equals("Web"))c=1;
-		else c=2;
+		Double type = new Double(order.getType());
+		Double demand = new Double(order.getDemand());
+		Double number = new Double(order.getNumber());
 		order.setId(UUID.randomUUID().toString());
 		order.setUserid(user.getId());
-		order.setPrice(a*b*c);
+		order.setPrice(type*demand*number);
 		service.insert(order);
 		return "/main";
 	}
@@ -65,7 +57,6 @@ public class BaiZhiOrderController {
 	@RequestMapping("getPrice")
 	public @ResponseBody String getPrice(BaiZhiOrder order){
 		Double price = service.getPrice(order);
-		System.out.println("123123123123132");
 		return String.valueOf(price);
 	}
 }

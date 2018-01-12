@@ -10,4 +10,8 @@
         SELECT chinese FROM baizhi_page WHERE pagename = #{pageName}
     </select>
 
+    <select id="queryGermanByPageName" resultType="java.lang.String">
+        SELECT german FROM baizhi_page WHERE pagename = #{pageName}
+    </select>
+
 </mapper>
