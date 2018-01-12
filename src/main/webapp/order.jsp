@@ -42,10 +42,6 @@
                     for(var j in data){
                         $("#"+type[i]).append("<option value='"+prices[j]+"'>"+data[j]+"</option>");
                     }
-                    /*data.forEach(function (t) {
-                        console.log(t)
-                        $("#"+type[i]).append("<option value='"+result[i].price+"'>"+t+"</option>");
-                    })*/
                 }
             },"json")
 

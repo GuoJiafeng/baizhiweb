@@ -114,7 +114,7 @@
 		     	<ul>
                     <li><a href="${base_path}/file/toupload"><c:if test="${sessionScope.languageStatus eq '1'}">提交需求文档</c:if><c:if test="${sessionScope.languageStatus eq '0' || sessionScope.languageStatus == null}">Make an Appointment</c:if></a></li>
                     <li><a href="${base_path}/order/toorder"><c:if test="${sessionScope.languageStatus eq '1'}">定制软件内容</c:if><c:if test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">Pricing</c:if></a></li>
-		     		<li><a href="${base_path}/download.jsp"><c:if test="${sessionScope.languageStatus eq '1'}">如何使用网站</c:if><c:if test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">How it works</c:if></a></li>
+		     		<li><a href="${base_path}/download.jsp"><c:if test="${sessionScope.languageStatus eq '1'}">工作流程</c:if><c:if test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">How it works</c:if></a></li>
 					<c:if test="${sessionScope.user==null}"><li style="padding-right: 0px;"><img class="imgU" src="${base_path}/img/user.png" alt="touxiang" /><a href="${base_path}/user/tologin"><c:if test="${sessionScope.languageStatus eq '1'}">登录</c:if><c:if test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">Land</a></c:if></li></c:if>
 					<c:if test="${sessionScope.user!=null}">Hello ${sessionScope.user.username}</c:if>
 		     	</ul>

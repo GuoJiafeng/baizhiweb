@@ -19,8 +19,10 @@ public class BaiZhiPageServiceImpl implements BaiZhiPageService {
     public String queryContentByPageNameAndStatus(String pageName, String Status) {
         if(Status.equals("0")){
             return baiZhiPageDAO.queryEnglishByPageName(pageName);
-        }else {
+        }else if(Status.equals("1")){
             return baiZhiPageDAO.queryChineseByPageName(pageName);
+        }else {
+            return baiZhiPageDAO.queryGermanByPageName(pageName);
         }
     }
 }

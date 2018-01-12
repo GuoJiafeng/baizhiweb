@@ -11,18 +11,17 @@ import javax.servlet.http.HttpSession;
 public class BaiZhiPageController {
 
     @RequestMapping("/changeStatus")
-    public String changeStatus(HttpSession session, HttpServletRequest req){
+    public String changeStatus(HttpSession session, HttpServletRequest req,String status){
         String str = req.getHeader("Referer");
         String[] path = str.split("/");
         String string = path[path.length-2];
         String pageName = path[path.length-1];
-        String status = (String) session.getAttribute("languageStatus");
-        if(status == null){
-            session.setAttribute("languageStatus","1");
-        }else if(status.equals("1")){
+        if(status.equals("0")){
             session.setAttribute("languageStatus","0");
-        }else {
+        }else if(status.equals("1")){
             session.setAttribute("languageStatus","1");
+        }else if(status.equals("2")){
+            session.setAttribute("languageStatus","2");
         }
         if(str.endsWith(".jsp")){
             return "download";
