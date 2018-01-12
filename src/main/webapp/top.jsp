@@ -82,6 +82,15 @@
 				border: none;
 				outline: none;
 			}
+			.dg{
+				background-image: url(${base_path}/img/dg.jpg);
+				background-repeat: no-repeat;
+				background-size: 36px 26px;
+				height: 26px;
+				width: 36px;
+				border: none;
+				outline: none;
+			}
 			.switch{
 				box-sizing: border-box;
 				padding-top: 25px;
@@ -92,10 +101,15 @@
 				font-size: 16px;
 				cursor: pointer;
 			}
+			.userInfo{
+				position: absolute;
+				right: 100px;
+				top:50px;
+			}
 		</style>
 	</head>
 	<body>
-		<div>
+		<div style="height: 70px">
 			<div class="row">
 			<!--  图标盒子 -->
      		 <div class="logo col-sm-4">
@@ -115,8 +129,6 @@
                     <li><a href="${base_path}/file/toupload"><c:if test="${sessionScope.languageStatus eq '1'}">提交需求文档</c:if><c:if test="${sessionScope.languageStatus eq '0' || sessionScope.languageStatus == null}">Make an Appointment</c:if></a></li>
                     <li><a href="${base_path}/order/toorder"><c:if test="${sessionScope.languageStatus eq '1'}">定制软件内容</c:if><c:if test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">Pricing</c:if></a></li>
 		     		<li><a href="${base_path}/download.jsp"><c:if test="${sessionScope.languageStatus eq '1'}">如何使用网站</c:if><c:if test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">How it works</c:if></a></li>
-					<c:if test="${sessionScope.user==null}"><li style="padding-right: 0px;"><img class="imgU" src="${base_path}/img/user.png" alt="touxiang" /><a href="${base_path}/user/tologin"><c:if test="${sessionScope.languageStatus eq '1'}">登录</c:if><c:if test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">Land</a></c:if></li></c:if>
-					<c:if test="${sessionScope.user!=null}">Hello ${sessionScope.user.username}</c:if>
 		     	</ul>
 		     </div>
 		     <!-- 自适应手机导航  -->
@@ -126,13 +138,18 @@
 		     		<span>Menu</span>
 		     	</a>
 		     </div>
-		     
 		     <!-- 中英文切换个盒子 -->
 		     <div class="switch col-sm-2 hidden-xs">
 				<a href="${base_path}/page/changeStatus"><button class="usa"></button></a>
 				 <a href="${base_path}/page/changeStatus"><button class="cn"></button></a>
+				 <a href="${base_path}/page/changeStatus"><button class="dg"></button></a>
 		     </div>
-		    </div> 
+		    </div>
+			<!-- 用户信息  -->
+			<div class="userInfo">
+				<c:if test="${sessionScope.user==null}"><li style="padding-right: 0px;"><img class="imgU" src="${base_path}/img/user.png" alt="touxiang" /><a href="${base_path}/user/tologin"><c:if test="${sessionScope.languageStatus eq '1'}">登录</c:if><c:if test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">Land</a></c:if></li></c:if>
+				<c:if test="${sessionScope.user!=null}">Hello ${sessionScope.user.username}</c:if>
+			</div>
 		    <!-- 手机端导航 -->
   		 	<div class="row" id="xsUlD">
 	   		 	<div class="xsUl visible-xs" id="xsUl">

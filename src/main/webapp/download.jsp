@@ -10,35 +10,86 @@
     <link rel="stylesheet" type="text/css" href="${base_path}/css/mainRiver.css"/>
     <link rel="stylesheet" type="text/css" href="${base_path}/css/webStyle1.css"/>
     <style type="text/css">
-        .section_text ul li{
-            position: relative;
-            height: 50px;
-            line-height: 50px;
+        .videoC{
+            height: 400px;
+            width: 800px;
+            border: 1px solid black;
+            margin:30px auto;
         }
-        .section_text ul li span{
-            font-size: 20px;
+        .showDiv{
+            width: 1000px;
+            margin:20px auto;
+            height: 430px;
+            border: 1px solid black;
         }
-        .section_text ul li a{
-            position: absolute;
-            right:150px;
-            cursor: pointer;
+        .showLogo{
+            width: 100%;
+            height:150px;
         }
-        .section_text ul li a:hover{
-             color: red;
-         }
+        .showLogo ul{
+            padding-left: 100px;
+        }
+        .showLogo li{
+
+            float: left;
+            display: block;
+            border: 1px solid black;
+            height: 150px;
+            width: 200px;
+            margin-left: 50px;
+        }
+        .showP ul{
+            padding-left: 100px;
+        }
+        .showP li{
+            float: left;
+            display: block;
+            border: 1px solid black;
+            height: 150px;
+            width: 200px;
+            margin-left: 50px;
+            box-sizing: border-box;
+        }
+        .showDiv img{
+            height: 140px;
+            width: 190px;
+        }
+        .showDiv span{
+            display: block;
+            text-align: center;
+            margin: 5px 0px;
+            font-size: 22px;
+        }
     </style>
     <script type="text/javascript" src="${base_path}/js/jquery-1.8.3.min.js"></script>
 </head>
 <body>
 
 <jsp:include page="top.jsp"/>
-
+<hr>
 <form action="${base_path}/order/order.do" method="post">
-    <div class="section_text">
-        <ul>
-            <li><span>English_translation ${name}${requestScope.contens[0]}</span><a href="/file/download.do?fileName=English.pptx">下载</a></li>
-            <li><span>中文流程 ${name}${requestScope.contens[1]}</span><a href="<c:url value="/file/download"/>?fileName=Chinese.pptx">下载</a></li>
-        </ul>
+    <div class="videoC">
+        <video autoplay="autoplay" controls="controls" loop="loop">
+            <source src="${base_path}/video/demo.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="showDiv">
+        <span class="spanL">项目展示</span>
+        <div class="showLogo">
+            <ul>
+                <li><img src="${base_path}/img/project.png" alt="啊"></li>
+                <li><img src="${base_path}/img/project.png" alt="啊"></li>
+                <li><img src="${base_path}/img/project.png" alt="啊"></li>
+            </ul>
+        </div>
+        <span class="spanL">合作商家</span>
+        <div class="showP">
+            <ul>
+                <li><img src="${base_path}/img/project.png" alt="啊"></li>
+                <li><img src="${base_path}/img/project.png" alt="啊"></li>
+                <li><img src="${base_path}/img/project.png" alt="啊"></li>
+            </ul>
+        </div>
     </div>
 </form>
 <div class="footer">
