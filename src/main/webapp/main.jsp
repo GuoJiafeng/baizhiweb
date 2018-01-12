@@ -8,13 +8,6 @@
 		<title></title>
 		<!--引入外部样式-->
 		<link rel="stylesheet" type="text/css" href="${base_path}/css/mainRiver.css"/>
-		<style type="text/css">
-			.footer{
-				position: relative;
-				top: 90%;
-				width: 100%;
-			}
-		</style>
 	</head>
 	<body>
 		<!--导航栏信息-->

@@ -10,11 +10,6 @@
     <link rel="stylesheet" type="text/css" href="${base_path}/css/mainRiver.css"/>
     <link rel="stylesheet" type="text/css" href="${base_path}/css/webStyle1.css"/>
     <style type="text/css">
-        .footer{
-            position: absolute;
-            top: 90%;
-            width: 100%;
-        }
         .section_text ul li{
             position: relative;
             height: 50px;

@@ -18,6 +18,11 @@
 				font-size: 24px;
 				font-weight: bold;
 			}
+			.footer{
+				position: relative;
+				top: 90%;
+				width: 100%;
+			}
 		</style>
 		<div>
 			
