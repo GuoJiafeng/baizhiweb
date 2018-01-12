@@ -34,15 +34,19 @@
     <script type="text/javascript">
         $(function () {
             $.get("${base_path}/select/selectByPageName?source=order.jsp",function(result){
-                console.log(result)
                 var type=["type","demand","number"];
-               for(var i in result){
-                   var data = result[i].options.split("_");
-                   data.forEach(function (t) {
-                       console.log(t)
-                       $("#"+type[i]).append("<option value=''>"+t+"</option>");
-                   })
-               }
+                console.log(result)
+                for(var i in result){
+                    var data = result[i].options.split("_");
+                    var prices = result[i].price.split("_");
+                    for(var j in data){
+                        $("#"+type[i]).append("<option value='"+prices[j]+"'>"+data[j]+"</option>");
+                    }
+                    /*data.forEach(function (t) {
+                        console.log(t)
+                        $("#"+type[i]).append("<option value='"+result[i].price+"'>"+t+"</option>");
+                    })*/
+                }
             },"json")
 
             $("#getPrice").click(function () {
@@ -55,9 +59,6 @@
             var type = $("#type").val();
             var number = $("#number").val();
             var demand = $("#type").val();
-
-            alert(type)
-
             $.ajax({
                     type: "post",
                     url: "<c:url value="/order/getPrice"/>",
@@ -65,7 +66,6 @@
                     dataType: "text",
                     success: function (result) {
                         alert("成功获取价格，将显示在页面中！")
-                        alert(result)
                         $("#showPrice").text("price：" + result);
                     }
                 }
@@ -118,7 +118,7 @@
     </div>
 </form>
 <div class="footer">
-<jsp:include page="footer.jsp"/>
+    <jsp:include page="footer.jsp"/>
 </div>
 </body>
 </html>
