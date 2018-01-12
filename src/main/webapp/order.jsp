@@ -11,11 +11,6 @@
     <link rel="stylesheet" type="text/css" href="${base_path}/css/webStyle1.css"/>
     <script type="text/javascript" src="${base_path}/js/jquery-1.8.3.min.js"></script>
     <style type="text/css">
-        .footer{
-            position: absolute;
-            top: 90%;
-            width: 100%;
-        }
         .priceC{
             position: absolute;
             top: 23px;
@@ -26,10 +21,15 @@
             background-color: #F8FFC0;
             border-radius: 3px;
             color: #fccf80;
+            font-size: 18px;
         }
         .select_sum_last{
             position: relative;
         }
+        .section_text{
+            font-size: 18px;
+        }
+
     </style>
     <script type="text/javascript">
         $(function () {

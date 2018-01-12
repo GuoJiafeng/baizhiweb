@@ -12,15 +12,20 @@
 
     <script type="text/javascript" src="${base_path}/js/jquery-1.8.3.min.js"></script>
     <style type="text/css">
-        .footer{
-            position: absolute;
-            top: 90%;
-            width: 100%;
+        .wenImg{
+            position: relative;
+            top:-3px;
+            cursor: pointer;
+        }
+        .tishi{
+            font-size: 10px;
         }
     </style>
     <script type="text/javascript">
 
         $(function () {
+            $(".tishi").hide();
+
             $("#up_file").change(function () {
                 checkType();
             })
@@ -54,6 +59,10 @@
                 }
             }
         }
+
+        function showFont(){
+            $(".tishi").show();
+        }
     </script>
 </head>
 <body>
@@ -65,7 +74,10 @@
 
         <ul>
             <li class="s_upload">
-                <span>${requestScope.contents[0]}</span>
+                <span>${requestScope.contents[0]}
+                    <img class="wenImg" onmousemove="showFont()" src="${base_path}/img/wenhao.png" alt="">
+                    <a class="tishi" href="javascript:void(0)">没有模板请下载</a>
+                </span>
                 <label for="up_file"><img src="../img/s_upload.png" alt="upload"></label>
                 <p><input id="up_file" type="file" name="up_file"/></p>
                 <%--background: url(../img/s_upload.png) no-repeat center;--%>
