@@ -140,9 +140,9 @@
 		     </div>
 		     <!-- 中英文切换个盒子 -->
 		     <div class="switch col-sm-2 hidden-xs">
-				<a href="${base_path}/page/changeStatus"><button class="usa"></button></a>
-				 <a href="${base_path}/page/changeStatus"><button class="cn"></button></a>
-				 <a href="${base_path}/page/changeStatus"><button class="dg"></button></a>
+				<a href="${base_path}/page/changeStatus?status=0"><button class="usa"></button></a>
+				 <a href="${base_path}/page/changeStatus?status=1"><button class="cn"></button></a>
+				 <a href="${base_path}/page/changeStatus?status=2"><button class="dg"></button></a>
 		     </div>
 		    </div>
 			<!-- 用户信息  -->

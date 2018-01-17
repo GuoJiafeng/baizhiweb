@@ -10,26 +10,30 @@
     <link rel="stylesheet" type="text/css" href="${base_path}/css/mainRiver.css"/>
     <link rel="stylesheet" type="text/css" href="${base_path}/css/webStyle1.css"/>
     <style type="text/css">
-        .videoC{
+        .videoC {
             height: 400px;
             width: 800px;
             border: 1px solid black;
-            margin:30px auto;
+            margin: 30px auto;
         }
-        .showDiv{
+
+        .showDiv {
             width: 1000px;
-            margin:20px auto;
+            margin: 20px auto;
             height: 430px;
             border: 1px solid black;
         }
-        .showLogo{
+
+        .showLogo {
             width: 100%;
-            height:150px;
+            height: 150px;
         }
-        .showLogo ul{
+
+        .showLogo ul {
             padding-left: 100px;
         }
-        .showLogo li{
+
+        .showLogo li {
 
             float: left;
             display: block;
@@ -38,10 +42,12 @@
             width: 200px;
             margin-left: 50px;
         }
-        .showP ul{
+
+        .showP ul {
             padding-left: 100px;
         }
-        .showP li{
+
+        .showP li {
             float: left;
             display: block;
             border: 1px solid black;
@@ -50,11 +56,13 @@
             margin-left: 50px;
             box-sizing: border-box;
         }
-        .showDiv img{
+
+        .showDiv img {
             height: 140px;
             width: 190px;
         }
-        .showDiv span{
+
+        .showDiv span {
             display: block;
             text-align: center;
             margin: 5px 0px;
@@ -68,11 +76,29 @@
 <jsp:include page="top.jsp"/>
 <hr>
 <form action="${base_path}/order/order.do" method="post">
-    <div class="videoC">
-        <video autoplay="autoplay" controls="controls" loop="loop">
-            <source src="${base_path}/video/demo.mp4" type="video/mp4">
-        </video>
-    </div>
+    <c:if test="${sessionScope.languageStatus eq '0'}">
+        <div class="videoC">
+            <video autoplay="autoplay" controls="controls" loop="loop" style="width:100%;height: 100%">
+                <source src="${base_path}/video/demo.mp4" type="video/mp4">
+            </video>
+        </div>
+    </c:if>
+
+    <c:if test="${sessionScope.languageStatus eq '1'}">
+        <div class="videoC">
+            <video autoplay="autoplay" controls="controls" loop="loop">
+                <source src="${base_path}/video/demo.mp4" type="video/mp4">
+            </video>
+        </div>
+    </c:if>
+
+    <c:if test="${sessionScope.languageStatus eq '2'}">
+        <div class="videoC">
+            <video autoplay="autoplay" controls="controls" loop="loop">
+                <source src="${base_path}/video/demo.mp4" type="video/mp4">
+            </video>
+        </div>
+    </c:if>
     <div class="showDiv">
         <span class="spanL">项目展示</span>
         <div class="showLogo">
@@ -93,7 +119,7 @@
     </div>
 </form>
 <div class="footer">
-<jsp:include page="footer.jsp"/>
+    <jsp:include page="footer.jsp"/>
 </div>
 </body>
 </html>
