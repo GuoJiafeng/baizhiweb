@@ -53,6 +53,11 @@
 			.Navbar ul li a:hover{
 				color: #e4393c;
 			}
+			.liImg{
+				position: relative;
+				top:-5px;
+				left:-6px;
+			}
 			.xsGlc span{
 				display: block;
 				float: left;
@@ -129,14 +134,8 @@
                     <li><a href="${base_path}/file/toupload"><c:if test="${sessionScope.languageStatus eq '1'}">提交需求文档</c:if><c:if test="${sessionScope.languageStatus eq '0' || sessionScope.languageStatus == null}">Make an Appointment</c:if></a></li>
                     <li><a href="${base_path}/order/toorder"><c:if test="${sessionScope.languageStatus eq '1'}">定制软件内容</c:if><c:if test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">Pricing</c:if></a></li>
 		     		<li><a href="${base_path}/download.jsp"><c:if test="${sessionScope.languageStatus eq '1'}">如何使用网站</c:if><c:if test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">How it works</c:if></a></li>
+					<li style="padding-right: 0px;"><img class="liImg" src="${base_path}/img/user.png" alt=""/><a href="${base_path}/login.jsp">Land</a></li>
 		     	</ul>
-		     </div>
-		     <!-- 自适应手机导航  -->
-		     <div class="xsGlc col-xs-6 visible-xs" id="xsGlc">
-		     	<a style="font-size: 40px;">
-		     		<span class="glyphicon glyphicon-th-list"></span>
-		     		<span>Menu</span>
-		     	</a>
 		     </div>
 		     <!-- 中英文切换个盒子 -->
 		     <div class="switch col-sm-2 hidden-xs">
@@ -145,11 +144,10 @@
 				 <a href="${base_path}/page/changeStatus?status=2"><button class="dg"></button></a>
 		     </div>
 		    </div>
-			<!-- 用户信息  -->
-			<div class="userInfo">
-				<c:if test="${sessionScope.user==null}"><li style="padding-right: 0px;"><img class="imgU" src="${base_path}/img/user.png" alt="touxiang" /><a href="${base_path}/user/tologin"><c:if test="${sessionScope.languageStatus eq '1'}">登录</c:if><c:if test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">Land</a></c:if></li></c:if>
-				<c:if test="${sessionScope.user!=null}">Hello ${sessionScope.user.username}</c:if>
-			</div>
+			<%--<!-- 用户信息  -->--%>
+			<%--<div class="userInfo">--%>
+				<%--<c:if test="${sessionScope.user!=null}">Hello ${sessionScope.user.username}</c:if>--%>
+			<%--</div>--%>
 		    <!-- 手机端导航 -->
   		 	<div class="row" id="xsUlD">
 	   		 	<div class="xsUl visible-xs" id="xsUl">

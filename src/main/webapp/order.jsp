@@ -29,9 +29,70 @@
         .section_text{
             font-size: 18px;
         }
-
+        .wenImg{
+            position: relative;
+            top:-3px;
+            cursor: pointer;
+        }
+        .tishi{
+            font-size: 10px;
+        }
+        .up_file_img{
+            position: relative;
+            top:23px;
+            height: 40px;
+            width: 140px;
+            cursor: pointer;
+            right: -120px;
+        }
+        .footer{
+            position: relative;
+            top:95%;
+        }
     </style>
     <script type="text/javascript">
+
+        $(function () {
+            $(".tishi").hide();
+
+            $("#up_file").change(function () {
+                checkType();
+            })
+        })
+
+        function checkType() {
+
+            //检测上传文件的类型
+            var imgName = document.all.up_file.value;
+            var ext, idx;
+            if (imgName == '') {
+                document.all.submit_upload.disabled = true;
+                alert("请选择需要上传的文件!");
+                return;
+            } else {
+                idx = imgName.lastIndexOf(".");
+                if (idx != -1) {
+                    ext = imgName.substr(idx + 1).toUpperCase();
+                    ext = ext.toLowerCase();
+                    // alert("ext="+ext);
+                    if (ext != 'doc' && ext != 'docx' && ext != 'txt') {
+                        document.all.submit_upload.disabled = true;
+                        $("#up_file").val("");
+                        alert("只能上传.doc，.ocx，.txt类型的文件!");
+                        return;
+                    }
+                } else {
+                    document.all.submit_upload.disabled = true;
+                    alert("只能上传.doc，.ocx，.txt类型的文件!");
+                    return;
+                }
+            }
+        }
+
+        function showFont(){
+            $(".tishi").show();
+        }
+
         $(function () {
             $.get("${base_path}/select/selectByPageName?source=order.jsp",function(result){
                 var type=["type","demand","number"];
@@ -75,7 +136,6 @@
 <body>
 
 <jsp:include page="top.jsp"/>
-
 <form action="${base_path}/order/order.do" method="post">
     <div class="section_text">
         <ul>
@@ -107,9 +167,23 @@
                 <span id="showPrice">${price}${requestScope.contents[3]}</span>
                 <input  class="priceC" type="button" id="getPrice" value="calculation"/>
             </li>
+                <li class="s_upload">
+                <span>${requestScope.contents[0]}
+                    <img class="wenImg" onmousemove="showFont()" src="${base_path}/img/wenhao.png" alt="">
+                    <a class="tishi" href="javascript:void(0)">没有模板请下载</a>
+                </span>
+                    <label for="up_file" class="up_file_img"><img  src="../img/s_upload.png" alt="upload"></label>
+                    <p><input id="up_file" type="file" name="up_file" style="display: none"/></p>
+                    <%--background: url(../img/s_upload.png) no-repeat center;--%>
+                </li>
+
+                <li class="select_sum">
+                    <span>${requestScope.contents[1]}</span>
+                </li>
+                <li class="select_sum">
+                    <textarea style="height: 100%;width: 99.6%" name="text" placeholder="Please enter:"></textarea>
+                </li>
         </ul>
-
-
         <p class="submit"><input type="submit" name="" id="" value=""/></p>
     </div>
 </form>

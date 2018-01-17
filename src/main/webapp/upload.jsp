@@ -20,6 +20,11 @@
         .tishi{
             font-size: 10px;
         }
+        .footer{
+            position: absolute;
+            top:95%;
+            margin-top: 100px;
+        }
     </style>
     <script type="text/javascript">
 
@@ -68,10 +73,8 @@
 <body>
 
 <jsp:include page="top.jsp"/>
-
 <form action="${base_path}/file/upload.do" method="post" enctype="multipart/form-data">
     <div class="section_text">
-
         <ul>
             <li class="s_upload">
                 <span>${requestScope.contents[0]}
@@ -91,7 +94,6 @@
                 <textarea style="height: 100%;width: 99.6%" name="text" placeholder="Please enter:"></textarea>
             </li>
         </ul>
-
         <p class="submit"><input type="submit" name="" id="submit_upload" value=""/></p>
     </div>
 </form>

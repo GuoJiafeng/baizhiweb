@@ -20,8 +20,7 @@
 			}
 			.footer{
 				position: relative;
-				top: 90%;
-				width: 100%;
+				bottom: 2%;
 			}
 		</style>
 		<div>
@@ -29,6 +28,6 @@
 		</div>
 		<div class="bottom_footer">
 				<i>Contact us</i>
-				<span><img class="imgMail" src="img/mail.png" alt="iconMail" /> sales@vogella.com</span>
-				<span><img class="imgPhone" src="img/phone.png" alt="iconPhone" /> +49 40 7880 4360</span>
+				<span><img class="imgMail" src="${base_path}/img/mail.png" alt="iconMail" /> sales@vogella.com</span>
+				<span><img class="imgPhone" src="${base_path}/img/phone.png" alt="iconPhone" /> +49 40 7880 4360</span>
 		</div>

@@ -16,7 +16,10 @@
             border: 1px solid black;
             margin: 30px auto;
         }
-
+        .videoC video{
+            height: 100%;
+            width: 100%;
+        }
         .showDiv {
             width: 1000px;
             margin: 20px auto;
@@ -78,7 +81,7 @@
 <form action="${base_path}/order/order.do" method="post">
     <c:if test="${sessionScope.languageStatus eq '0'}">
         <div class="videoC">
-            <video autoplay="autoplay" controls="controls" loop="loop" style="width:100%;height: 100%">
+            <video controls="controls" loop="loop" >
                 <source src="${base_path}/video/demo.mp4" type="video/mp4">
             </video>
         </div>
@@ -86,7 +89,7 @@
 
     <c:if test="${sessionScope.languageStatus eq '1'}">
         <div class="videoC">
-            <video autoplay="autoplay" controls="controls" loop="loop">
+            <video controls="controls" loop="loop">
                 <source src="${base_path}/video/demo.mp4" type="video/mp4">
             </video>
         </div>
@@ -94,7 +97,7 @@
 
     <c:if test="${sessionScope.languageStatus eq '2'}">
         <div class="videoC">
-            <video autoplay="autoplay" controls="controls" loop="loop">
+            <video controls="controls" loop="loop">
                 <source src="${base_path}/video/demo.mp4" type="video/mp4">
             </video>
         </div>
