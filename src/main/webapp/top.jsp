@@ -132,9 +132,9 @@
 		     <div class="Navbar col-sm-6 col-xs-6 hidden-xs">
 		     	<ul>
 					<li><a href="${base_path}/file/toupload"><c:if test="${sessionScope.languageStatus eq '1'}">关于我们</c:if><c:if test="${sessionScope.languageStatus eq '0' || sessionScope.languageStatus == null}">About us</c:if></a></li>
-                    <li><a href="${base_path}/order/toorder"><c:if test="${sessionScope.languageStatus eq '1'}">定制软件内容</c:if><c:if test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">Pricing</c:if></a></li>
+                    <li><a href="${base_path}/order/toorder"><c:if test="${sessionScope.languageStatus eq '1'}">定制软件</c:if><c:if test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">Pricing</c:if></a></li>
 		     		<li><a href="${base_path}/file/todownload"><c:if test="${sessionScope.languageStatus eq '1'}">如何使用网站</c:if><c:if test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">How it works</c:if></a></li>
-					<li style="padding-right: 0px;"><img class="liImg" src="${base_path}/img/user.png" alt=""/><a href="${base_path}/login.jsp">Land</a></li>
+					<li style="padding-right: 0px;"><img class="liImg" src="${base_path}/img/user.png" alt=""/><a href="${base_path}/login.jsp">登陆</a></li>
 		     	</ul>
 		     </div>
 		     <!-- 中英文切换个盒子 -->
