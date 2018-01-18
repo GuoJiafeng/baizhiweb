@@ -43,7 +43,7 @@ public class BaiZhiFileController {
 		String content = baiZhiPageService.queryContentByPageNameAndStatus("upload.jsp", status);
 		String[] contents = content.split("_");
 		request.setAttribute("contents",contents);
-		return "/upload";
+		return "/about";
 	}
 	@RequestMapping("upload")
 	public String upload(HttpSession session,MultipartFile file,BaiZhiFile bfile){
