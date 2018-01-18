@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.baizhi.entity.BaiZhiFile;
@@ -116,5 +117,21 @@ public class BaiZhiFileController {
 			}
 		}
 		return null;
+	}
+
+	/**
+	 * 跳转jsp界面
+	 * */
+
+	@RequestMapping("todownload")
+	public String todownload(HttpServletRequest request){
+		String status = (String) request.getSession().getAttribute("languageStatus");
+		if(status == null){
+			status = "0";
+		}
+		String content = baiZhiPageService.queryContentByPageNameAndStatus("download.jsp", status);
+		String[] contents = content.split("_");
+		request.setAttribute("contents",contents);
+		return "/download";
 	}
 }

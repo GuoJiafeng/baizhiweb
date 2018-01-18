@@ -44,9 +44,7 @@
 
     <mvc:interceptors>
         <mvc:interceptor>
-            <mvc:mapping path="/order/*"/>
-            <mvc:mapping path="/file/*"/>
-            <mvc:mapping path="/select/*"/>
+            <mvc:mapping path="/order/order.do"/>
             <bean class="com.baizhi.interceptor.LoginInteceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
