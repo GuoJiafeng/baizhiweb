@@ -133,7 +133,7 @@
 		     	<ul>
                     <li><a href="${base_path}/file/toupload"><c:if test="${sessionScope.languageStatus eq '1'}">提交需求文档</c:if><c:if test="${sessionScope.languageStatus eq '0' || sessionScope.languageStatus == null}">Make an Appointment</c:if></a></li>
                     <li><a href="${base_path}/order/toorder"><c:if test="${sessionScope.languageStatus eq '1'}">定制软件内容</c:if><c:if test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">Pricing</c:if></a></li>
-		     		<li><a href="${base_path}/download.jsp"><c:if test="${sessionScope.languageStatus eq '1'}">如何使用网站</c:if><c:if test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">How it works</c:if></a></li>
+		     		<li><a href="${base_path}/file/todownload"><c:if test="${sessionScope.languageStatus eq '1'}">如何使用网站</c:if><c:if test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">How it works</c:if></a></li>
 					<li style="padding-right: 0px;"><img class="liImg" src="${base_path}/img/user.png" alt=""/><a href="${base_path}/login.jsp">Land</a></li>
 		     	</ul>
 		     </div>

@@ -87,6 +87,14 @@
         </div>
     </c:if>
 
+    <c:if test="${sessionScope.languageStatus == null}">
+        <div class="videoC">
+            <video controls="controls" loop="loop" >
+                <source src="${base_path}/video/demo.mp4" type="video/mp4">
+            </video>
+        </div>
+    </c:if>
+
     <c:if test="${sessionScope.languageStatus eq '1'}">
         <div class="videoC">
             <video controls="controls" loop="loop">
@@ -103,7 +111,7 @@
         </div>
     </c:if>
     <div class="showDiv">
-        <span class="spanL">项目展示</span>
+        <span class="spanL">${requestScope.contents[0]}</span>
         <div class="showLogo">
             <ul>
                 <li><img src="${base_path}/img/project.png" alt="啊"></li>
@@ -111,7 +119,7 @@
                 <li><img src="${base_path}/img/project.png" alt="啊"></li>
             </ul>
         </div>
-        <span class="spanL">合作商家</span>
+        <span class="spanL">${requestScope.contents[1]}</span>
         <div class="showP">
             <ul>
                 <li><img src="${base_path}/img/project.png" alt="啊"></li>
