@@ -43,7 +43,7 @@ public class BaiZhiOrderServiceImpl implements BaiZhiOrderService {
         if (type.equals("Web")) c = 1;
         else c = 2;*/
 
-        Double price = type * demand * number;
+        Double price = number;
         return price;
     }
 

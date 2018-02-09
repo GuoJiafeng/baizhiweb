@@ -1,176 +1,187 @@
-<%@ page pageEncoding="UTF-8" contentType="text/html;charest=UTF8" isELIgnored="false" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:set var="base_path" value="${pageContext.request.contextPath}"></c:set>
-	     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<style type="text/css">
-			*{
-				margin: 0;
-				top: 0;
-			}
-			.logo{
-				box-sizing: border-box;
-				padding-left: 100px;
-			}
-			.logoImg{
-				position: relative;
-				top:15px;
-				float: left;
-			}
-			.logoInfo{
-				float: left;
-				margin-left:10px ;
-			}
-			.logoInfo b{
-				display: block;
-				position: absolute;
-				font-size: 18px;
-				top:16px;
-			}
-			.logoInfo span{
-				display: block;
-				font-size: 16px;
-				position: absolute;
-				top:40px;
-			}
-			.Navbar ul{
-				float: right;
-			}
-			.Navbar ul li{
-				float: left;
-				display: block;
-				list-style: none;
-				padding-right: 26px;
-			}
-			.Navbar ul li a{
-				color: #a7a6a6;
-				font-size: 20px;
-				line-height: 80px;
-				cursor: pointer;
-				font-weight: bold;
-			}
-			.Navbar ul li a:hover{
-				color: #e4393c;
-			}
-			.liImg{
-				position: relative;
-				top:-5px;
-				left:-6px;
-			}
-			.xsGlc span{
-				display: block;
-				float: left;
-				position: relative;
-				top:15px;
-				left: 25px;
-				cursor: pointer;
-			}
-			.imgU{
-				position: relative;
-				top:-5px;
-				left:-5px;
-			}
-			.usa{
-				background-image: url(${base_path}/img/USA.png);
-				background-repeat: no-repeat;
-				height: 26px;
-				width: 36px;
-				border: none;
-				outline: none;
-			}
-			.cn{
-				background-image: url(${base_path}/img/CN.png);
-				background-repeat: no-repeat;
-				height: 26px;
-				width: 36px;
-				border: none;
-				outline: none;
-			}
-			.dg{
-				background-image: url(${base_path}/img/dg.jpg);
-				background-repeat: no-repeat;
-				background-size: 36px 26px;
-				height: 26px;
-				width: 36px;
-				border: none;
-				outline: none;
-			}
-			.switch{
-				box-sizing: border-box;
-				padding-top: 25px;
-			}
-			.xsUl{
-				padding-top: 10px;
-				padding-left: 20px;
-				font-size: 16px;
-				cursor: pointer;
-			}
-			.userInfo{
-				position: absolute;
-				right: 100px;
-				top:50px;
-			}
-		</style>
-	</head>
-	<body>
-		<div style="height: 70px">
-			<div class="row">
-			<!--  图标盒子 -->
-     		 <div class="logo col-sm-4">
-     		 	<div class="logoImg hidden-xs">
-					<a href="${base_path}/user/tomain"><img src="${base_path}/img/login.png" alt="商标"></a>
-     		 	</div>
-     		 	<div class="logoInfo visible-lg">
-     		 		<p>
-						<b>MainRiver Soft  ${ requestScope.contens[1] }</b>
-						<span>069 - 657 777 1</span>
-					</p>
-     		 	</div>
-     		 </div>
-     		 <!--  导航栏盒子 -->
-		     <div class="Navbar col-sm-6 col-xs-6 hidden-xs">
-		     	<ul>
-					<li><a href="${base_path}/file/toupload"><c:if test="${sessionScope.languageStatus eq '1'}">关于我们</c:if><c:if test="${sessionScope.languageStatus eq '0' || sessionScope.languageStatus == null}">About us</c:if></a></li>
-                    <li><a href="${base_path}/order/toorder"><c:if test="${sessionScope.languageStatus eq '1'}">定制软件</c:if><c:if test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">Pricing</c:if></a></li>
-		     		<li><a href="${base_path}/file/todownload"><c:if test="${sessionScope.languageStatus eq '1'}">如何使用网站</c:if><c:if test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">How it works</c:if></a></li>
-					<li style="padding-right: 0px;"><img class="liImg" src="${base_path}/img/user.png" alt=""/><a href="${base_path}/login.jsp">登陆</a></li>
-		     	</ul>
-		     </div>
-		     <!-- 中英文切换个盒子 -->
-		     <div class="switch col-sm-2 hidden-xs">
-				<a href="${base_path}/page/changeStatus?status=0"><button class="usa"></button></a>
-				 <a href="${base_path}/page/changeStatus?status=1"><button class="cn"></button></a>
-				 <a href="${base_path}/page/changeStatus?status=2"><button class="dg"></button></a>
-		     </div>
-		    </div>
-			<%--<!-- 用户信息  -->--%>
-			<%--<div class="userInfo">--%>
-				<%--<c:if test="${sessionScope.user!=null}">Hello ${sessionScope.user.username}</c:if>--%>
-			<%--</div>--%>
-		    <!-- 手机端导航 -->
-  		 	<div class="row" id="xsUlD">
-	   		 	<div class="xsUl visible-xs" id="xsUl">
-			     	<ul class="nav nav-pills nav-stacked">
-			     		<li><a href="${base_path}/file/toupload">Make an Appointment ${ 2 }</a></li>
-			     		<li><a href="${base_path}/order/toorder">Pricing ${ 3 }</a></li>
-			     		<li><a href="${base_path}/download.jsp">How it works ${ 4 }</a></li>
-			     		<li style="padding-right: 0px;"><a>Land</a></li>
-			     	</ul>
-			     </div>
-   			</div>
-		</div>
-		<script type="text/javascript">
-			var flag=true;
-			$("#xsUlD").hide();
-			$("#xsGlc").click(function(){
-				if(flag){
-					$("#xsUlD").slideDown(500);
-					flag=false;
-				}else{
-					$("#xsUlD").slideUp(500);
-					flag=true;
-				}
-			});			
-		</script>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: G
+  Date: 2018/1/23
+  Time: 10:26
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/fileinput/css/fileinput.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/select/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 
+
+    <title>Document</title>
+</head>
+<body style="padding-top: 50px">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#responsive-navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+            <a href="${pageContext.request.contextPath}/main.jsp" class="navbar-brand"><strong>MainRiverSoft</strong>.com</a>
+        </div>
+        <div class="collapse navbar-collapse" id="responsive-navbar">
+
+
+            <%--  <form action="" class="navbar-form navbar-left">
+                  <input type="text" placeholder="搜索" class="form-control">
+                  <button type="submit">
+                      <span class="glyphicon glyphicon-search"></span>
+                  </button>
+              </form>--%>
+
+            <%--  <a href="" class="btn btn-primary btn-sm navbar-btn navbar-right hidden-xs">订阅</a>--%>
+            <div class="profile navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="${pageContext.request.contextPath}/file/tohow"><c:if
+                            test="${sessionScope.languageStatus eq '1'}">如何使用网站</c:if>
+                        <c:if
+                                test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">How it works</c:if>
+                        <c:if
+                                test="${sessionScope.languageStatus eq '2'|| sessionScope.languageStatus == null}">Wie es funktioniert</c:if>
+                    </a>
+                    </li>
+                    <li><a href="${pageContext.request.contextPath}/order/toorder"><c:if
+                            test="${sessionScope.languageStatus eq '1'}">定制软件</c:if>
+                        <c:if
+                                test="${sessionScope.languageStatus eq '0'|| sessionScope.languageStatus == null}">Pricing</c:if>
+
+                        <c:if
+                                test="${sessionScope.languageStatus eq '2'|| sessionScope.languageStatus == null}">Preisgestaltung</c:if></a>
+                    </li>
+                    <li><a href="${pageContext.request.contextPath}/file/toabout"><c:if
+                            test="${sessionScope.languageStatus eq '1'}">关于我们</c:if><c:if
+                            test="${sessionScope.languageStatus eq '0' || sessionScope.languageStatus == null}">About us</c:if>
+
+                        <c:if
+                                test="${sessionScope.languageStatus eq '2' || sessionScope.languageStatus == null}">Über Us</c:if></a>
+                        </a>
+                    </li>
+
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                           aria-haspopup="true" aria-expanded="false">
+                            <c:if test="${sessionScope.languageStatus eq '2' || sessionScope.languageStatus == null}">Sprache</c:if>
+                            <c:if test="${sessionScope.languageStatus eq '1' || sessionScope.languageStatus == null}">语言</c:if>
+                            <c:if test="${sessionScope.languageStatus eq '0' || sessionScope.languageStatus == null}">Language</c:if>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <li><a href="${pageContext.request.contextPath}/page/changeStatus?status=0">
+                                <button class="usa"><img
+                                        src="${pageContext.request.contextPath}/img/USA.jpg"></img></button>
+                            </a></li>
+
+                            <li><a href="${pageContext.request.contextPath}/page/changeStatus?status=1">
+                                <button class="cn"><img src="${pageContext.request.contextPath}/img/CN.jpg"></img>
+                                </button>
+                            </a></li>
+
+                            <li><a href="${pageContext.request.contextPath}/page/changeStatus?status=2">
+                                <button class="dg"><img src="${pageContext.request.contextPath}/img/dg.jpg"></img>
+                                </button>
+                            </a></li>
+
+                        </ul>
+
+
+                    </li>
+                    <c:if test="${sessionScope.user==null}">
+
+
+                            <c:if
+                                    test="${sessionScope.languageStatus eq '1'}">
+                                <li><a href="" data-toggle="modal" data-target="#login-modal">登录</a></li>
+                                <li><a href="" data-toggle="modal" data-target="#reg-modal">注册</a></li>
+                            </c:if>
+                            <c:if
+                                    test="${sessionScope.languageStatus eq '0'}">
+                                <li><a href="" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                                <li><a href="" data-toggle="modal" data-target="#reg-modal">Register</a></li>
+                            </c:if>
+
+                            <c:if
+                                    test="${sessionScope.languageStatus eq '2'}">
+                                <li><a href="" data-toggle="modal" data-target="#login-modal">Anmelden</a></li>
+                                <li><a href="" data-toggle="modal" data-target="#reg-modal">Registrieren</a></li>
+                            </c:if>
+                        </ul>
+                    </c:if>
+
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div class="modal fade" id="login-modal" tabindex="-1" data-remote="${pageContext.request.contextPath}/user/tologin.do">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+
+        </div>
+    </div>
+
+</div>
+
+
+<div class="modal fade" id="reg-modal" tabindex="-1" data-remote="${pageContext.request.contextPath}/user/toreg.do">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+
+        </div>
+    </div>
+
+</div>
+
+
+<script src="${pageContext.request.contextPath}/bootstrap/jquery-3.3.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/bootstrap/select/dist/js/bootstrap-select.min.js"></script>
+<script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/bootstrap/js/holder.js"></script>
+<script src="${pageContext.request.contextPath}/bootstrap/fileinput/js/fileinput.min.js"></script>
+
+<script>
+    /*  $(function () {
+         $('#login-modal').modal({
+             show:false,
+             backdrop:true,
+             remote:'login-form.jsp'
+         })
+      });*/
+
+    $(function () {
+        $('#login-modal').on('show.bs.modal', function () {
+            console.log("显示对话框！")
+        })
+        $('#login-modal').on('shown.bs.modal', function () {
+            console.log("对话框已经显示了！")
+        })
+        $('#login-modal').on('hide.bs.modal', function () {
+            console.log("隐藏对话框！")
+        })
+        $('#login-modal').on('hidden.bs.modal', function () {
+            console.log("对话框已经隐藏了！")
+        })
+        $('#login-modal').on('loaded.bs.modal', function () {
+            console.log("内容已经载入完成！")
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+body {
+    padding-top: 200px;
+}
+
+.navbar-inverse input[type="text"] {
+    background: #313131;
+    border: none;
+    color: #999;
+}
+
+.navbar-inverse .navbar-form {
+    position: relative;
+}
+
+.navbar-inverse button[type="submit"] {
+    position: absolute;
+    top: 25%;
+    right: 20px;
+    background: none;
+    border: none;
+
+}
+
+img {
+    width: 100%;
+
+}
+
+.navbar-inverse .glyphicon {
+    color: #999;
+}
+
+.profile {
+    margin-right: 25px;
+}
+
+@media (min-width: 768px) {
+    .navbar-inverse button[type="submit"] {
+        top: 15%;
+    }
+}
+
+.row01 {
+    border: 1px solid #ede3ee;
+    border-radius: 15px;
+
+}
+.how-page{
+
+    width: 100%;
+    border: 1px solid #ede3ee;
+    border-radius: 15px;
+
+}
+
+.footer {
+    color: #777;
+    padding: 30px 0;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 70px;
+}

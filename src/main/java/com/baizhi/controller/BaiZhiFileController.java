@@ -35,6 +35,34 @@ public class BaiZhiFileController {
 	public void setService(BaiZhiFileService service) {
 		this.service = service;
 	}
+
+
+	@RequestMapping("toabout")
+	public String toabout(HttpServletRequest request){
+		String status = (String) request.getSession().getAttribute("languageStatus");
+		if(status == null){
+			status = "0";
+		}
+		String content = baiZhiPageService.queryContentByPageNameAndStatus("about.jsp", status);
+		String[] contents = content.split("_");
+		request.setAttribute("contents",contents);
+		return "/about";
+	}
+
+
+	@RequestMapping("tohow")
+	public String tohow(HttpServletRequest request){
+		String status = (String) request.getSession().getAttribute("languageStatus");
+		if(status == null){
+			status = "0";
+		}
+		String content = baiZhiPageService.queryContentByPageNameAndStatus("how.jsp", status);
+		String[] contents = content.split("_");
+		request.setAttribute("contents",contents);
+		return "/how";
+	}
+
+
 	@RequestMapping("toupload")
 	public String toupload(HttpServletRequest request){
 		String status = (String) request.getSession().getAttribute("languageStatus");

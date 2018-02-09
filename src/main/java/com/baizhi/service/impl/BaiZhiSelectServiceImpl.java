@@ -17,8 +17,8 @@ public class BaiZhiSelectServiceImpl implements BaiZhiSelectService {
     private BaiZhiSelectDAO baiZhiSelectDAO;
 
     @Override
-    public List<BaiZhiSelect> selectSelectAllContentsByPageName(String source) {
-        List<BaiZhiSelect> result = baiZhiSelectDAO.selectSelectAllContentsByPageName(source);
+    public List<BaiZhiSelect> selectSelectAllContentsByPageName(String source,String status) {
+        List<BaiZhiSelect> result = baiZhiSelectDAO.selectSelectAllContentsByPageName(source,status);
         System.out.println(result);
         System.out.println(source);
         return result;

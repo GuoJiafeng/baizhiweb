@@ -9,6 +9,21 @@ public class BaiZhiOrder implements Serializable{
 	private String number;
 	private String demand;
 	private Double price;
+	private String description;
+
+	public String getDescription() {
+		return description;
+	}
+	public BaiZhiOrder(String type,String demand,String number){
+		this.type=type;
+		this.demand=demand;
+		this.number=number;
+	}
+	public BaiZhiOrder(){}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
 	public String getId() {
 		return id;
 	}

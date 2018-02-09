@@ -38,16 +38,17 @@
     </bean>
     <mvc:annotation-driven></mvc:annotation-driven>
     <mvc:resources location="/css/" mapping="/css/**"/>
-    <mvc:resources location="/js/" mapping="/js/**"/>
     <mvc:resources location="/img/" mapping="/img/**"/>
     <mvc:resources location="/video/" mapping="/video/**"/>
+    <mvc:resources location="/bootstrap/" mapping="/bootstrap/**"/>
+    <mvc:resources location="/image/" mapping="/image/**"/>
 
-    <mvc:interceptors>
+   <!-- <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/order/order.do"/>
             <bean class="com.baizhi.interceptor.LoginInteceptor"/>
         </mvc:interceptor>
-    </mvc:interceptors>
+    </mvc:interceptors>-->
     <!--<mvc:interceptors>-->
         <!--<mvc:interceptor>-->
             <!--<mvc:mapping path="*"/>-->
