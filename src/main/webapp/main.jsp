@@ -40,7 +40,7 @@
 
 <div class="container">
 <div class="row" style="font-size:20px">
-    <marquee width=100% direction=right align=middle> ${requestScope.contents[0]}</marquee>
+    <marquee width=100% direction=left align=middle> ${requestScope.contents[0]}</marquee>
 
 </div>
 

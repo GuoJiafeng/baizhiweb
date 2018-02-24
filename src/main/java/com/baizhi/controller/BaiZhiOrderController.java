@@ -75,9 +75,9 @@ public class BaiZhiOrderController {
     String getPrice(BaiZhiOrder order, HttpSession session) {
         Double price = service.getPrice(order);
         String statu = (String) session.getAttribute("languageStatus");
-        if ("1".equals(statu)) return String.valueOf(price) + "EURO";
-        else if ("2".equals(statu)) return String.valueOf(price) + "EURO";
-        return String.valueOf(price) + "EURO";
+        if ("1".equals(statu)) return String.valueOf(price) + "EUR(不含增值税)";
+        else if ("2".equals(statu)) return String.valueOf(price) + "EUR(ohne MwSt)";
+        return String.valueOf(price) + "EUR(without VAT)";
     }
 
     @RequestMapping("orderandupdate")
